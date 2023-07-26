@@ -1,0 +1,204 @@
+/* Slider */
+.slick-slider{
+    position: relative;
+    display: block;
+    z-index: 999;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-main-container{position: absolute;display: none;top: 0px;left: 0px;height: 100%;width: 100%;/* overflow-x: hidden; */}
+.slick-main-container .overlay-container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #0000006b;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    overflow-x: hidden;
+    z-index: 10;
+}
+
+.dismiss-card{position: absolute;right: 16px;z-index: 9999;padding: 6px;top: calc(20px + env(safe-area-inset-top, 0))}
+#priceContainer{margin-top:env(safe-area-inset-top, 0);}
+.slick-main-container .slick-dots{padding:0px;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    /* background: #fff; */
+    /* padding: 21px 0px; */
+    position: absolute;
+    top: 75px;
+    /* padding-left: 70px; */
+    width: calc(100%);
+    left: 0;
+    overflow-x: scroll;
+    gap: 20px;
+    /* justify-content: center; */
+    }
+.slick-main-container .slick-dots li.slick-active a{background-color:#1ADE99;color: #fff;}
+.slick-main-container .slick-dots li.slick-active h5{color: #fff;}
+.slick-main-container .slick-dots li.slick-active p{color: #fff;}
+.slick-main-container .slick-dots li{list-style: none;/* margin-right: 18px; */}
+.slick-main-container .slick-dots li:first-child{margin-left:24px; }
+.slick-main-container .slick-dots li:last-child{margin-right:24px; }
+.slick-main-container .slick-dots li a{text-align: center;padding: 6px 9px;display: block;background: #fff;border-radius: 5px;}
+.slick-main-container .slick-dots h5{margin:0px;/* white-space: nowrap; */color: #000;}
+.slick-main-container .slick-dots p{margin:0px;white-space: nowrap;color: #666;font-size: 12px;}
+.pricing-card-item{box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;border-radius: 10px;position: relative;margin-bottom: 34px;overflow: hidden;/* padding: 20px; *//* margin: 32px 23px; */background: #fff;margin-right: 20px;margin-top: 146px;}
+.pricing-card-item .card-body .book-btn{color: #000;background: transparent;border:none;border: 2px solid #1ADE99;width:100%;padding: 10px;border-radius: 8px;}
+.pricing-card-item .card-body .book-btn:active{background-color:#1ADE99;color:#fff;}
+
+.pricing-card-item .card-body{padding: 6px 18px;padding-bottom: 20px;}
+.pricing-card-item .card-header del{/* margin-bottom: 5px; */display: inline-block;}
+.pricing-card-item .card-header{background-color: #1ADE99;color:#fff;text-align: center;padding: 38px 10px;padding-top: 16px;}
+.pricing-card-item .card-header h4{margin:0px;font-weight: 500;font-size: 32px;margin-bottom: 18px;}
+.pricing-card-item .card-header h3{font-size:15px;font-weight: 500;margin: 0px;font-size: 30px;text-align: center;margin: 4px 0px;}
+.pricing-card-item .card-header  p{margin:0px;}
+.pricing-card-item .card-body ul{padding:0px;margin: 0px;/* padding: 16px 16px; */margin-bottom: 35px;/* margin-bottom: 78px; */margin-top: 28px;}
+.pricing-card-item .card-body ul li{list-style: none;display: flex;align-items: center;margin-bottom: 28px;}
+.pricing-card-item .card-body ul li img{height: 20px;width: 20px;margin-right: 10px;}
+.pricing-card-item .card-body ul li p{margin:0px;font-weight: 500;margin-bottom: 2px;color: #000;}
+.pricing-card-item .card-body ul li span{font-size:12px;color: #666;}
+.pricing-card-item .card-body .content{line-height: 15px;color: #000;}
+.pricing-card-item .card-body .secondary-txt{
+    margin: 0px;
+    font-size: 12px;
+    color: #c4c4c4;
+    font-style: italic;
+    text-align: left;
+    padding: 6px 0px;
+    margin-top: 5px;
+}
+/*pink color*/
+.pricing-card-item.bg-pink .card-header{background-color:#E86785;}
+.pricing-card-item.bg-pink   .book-btn{border-color:#E86785;}
+.pricing-card-item.bg-pink   .book-btn:active{background-color:#E86785;color:#fff;}
+
+
+/*purple color*/
+.pricing-card-item.bg-purple .card-header{background-color:#7080fa;}
+.pricing-card-item.bg-purple   .book-btn{border-color:#7080fa;}
+.pricing-card-item.bg-purple   .book-btn:active{background-color:#7080fa;color:#fff;}
+
+/*purple light color*/
+.pricing-card-item.bg-blue-light .card-header{background-color:#3cbbda;}
+.pricing-card-item.bg-blue-light   .book-btn{border-color:#3cbbda;}
+.pricing-card-item.bg-blue-light   .book-btn:active{background-color:#3cbbda;color:#fff;}
+
+
+.slick-arrow-container figure{margin:0px;position: absolute;top: 41%;z-index: 4;background : #1ade9947;/* padding: 11px 10px; */border: 1px solid #1ade99;border-radius: 50%;margin: 0px;height: 32px;padding: 6px;width: 32px;}
+.slick-arrow-container #prevArrow{left: 4px;}
+.slick-arrow-container #nextArrow{right: 4px;}
+.slick-arrow-container  img{height: 100%;width: 100%;line-height: 0px;padding: 0px;}
+.slick-disabled{display: none!important}

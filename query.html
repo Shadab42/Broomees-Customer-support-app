@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer-support</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+
+
+        </head>
+        <body>
+        <div class="main" id="main">
+            <div class="top-sec ">
+                <img onclick="window.history.back()" src="./images/arrow-angle-pointing-to-left.png" style="width: 14px;" alt="">
+                <h3 class="ml-5">What can we help You with today?</h3> 
+            </div>
+           
+            <div class=" mt-20">
+                <div class="searchbar searchbar-parent" onclick="openSearchArea()">
+                <input type="text" class="searchbox open-searchBox"  placeholder="Start typing to search"> 
+                <div class="searchIcon">
+                        <img src="./images/Vector.png" class="open-searchBox" alt=""> 
+                     </div>
+                    </div>
+                </div>
+            <div class="mt-20 direction-column" >
+              <div class="first-row ">
+                  <a href="chat.html"><div class="payment-issue my-boxx">
+                              <img src="./images/Wallet Money.png" class="img-fluid" alt="">
+                              <p> Payment Issues </p>
+                    </div>
+                </a>
+                <a href="chat.html"><div class="invoice my-boxx">
+                    <img src="./images/Bill List.png" alt="">
+                    <p>Invoice </p>
+
+                </div></a>
+           
+                <a href="chat.html"><div class="worker-related my-boxx">
+                    <img src="./images/User Hand Up.png" alt="">
+                    <p>Worker Related</p>
+
+                </div></a>
+                <a href="chat.html"><div class="payment-issue my-boxx">
+                    <img src="./images/Sale.png" alt="">
+                    <p>Active Offers</p>
+                </div>
+            </a>
+            <a href="chat.html"><div class="invoice my-boxx">
+                <img src="./images/Calendar Mark.png" alt="">
+                <p>Reschedule</p>
+
+            </div></a>
+                 
+            <a href="chat.html"><div class="worker-related my-boxx">
+                <img src="./images/Smile Circle.png" alt="">
+                <p>Other</p>
+
+            </div>
+           </a>
+        </div>
+    </div>
+
+
+<div class=" faq mt-30">
+    <p >General FAQ's & Articles for resolved queries</p>
+    <div class="line mt-10"></div>
+</div>
+</div>
+
+<!-- <div class="main" id="main"></div> -->
+
+           <div class="container-slider">
+
+               <ul class="slider">
+                   <li>
+                    <div class="active div" onclick="openCity('payment')">Payment</div>
+                     </li>
+                   
+                     <li>
+                       
+                       <div  class="div" onclick="openCity('worker')">worker Information</div>
+                     </li>
+                   
+                     <li>
+         
+                       <div class="div" onclick="openCity('service')">How can i add a service</div>
+                     </li>
+                   
+                     <li>
+                       <div class="div" onclick="openCity('replacement')">how can i get a replacement</div>
+                     </li>
+                     <li>
+                       <div class="div" onclick="openCity('Method')">Payment Method</div>
+                     </li>
+                     <li>
+                       <div class="div" onclick="openCity('Chenges')">i want UI Chenges</div>
+                     </li>
+               </ul>
+                    
+                    </div>
+
+
+                     <div class="faqs city ml-20" id="payment" >
+                    <ul>
+                        <li ><a href="faq.html">How can i Pause my booking?</a> </li>
+                        <li ><a href="faq.html">How can i share my feedback for worker?</a></li>
+                        <li ><a href="faq.html">How can i update my payment method?</a></li>
+                        <li ><a href="faq.html">How can i make my exeperience better?</a></li>
+                        <li ><a href="faq.html">I am shifting my place of residance, do i need to inform broomees?</a></li>
+                        <li ><a href="faq.html">How can i make my exeperience better?</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="faqs d-none city ml-20" id="worker" >
+                    <ul>
+                        <li><a href="faq.html">How can i Pause my booking?</a> </li>
+                        <li><a href="faq.html">How can i share my feedback for worker?</a></li>
+                        
+                        <li><a href="faq.html">I am shifting my place of residance, do i need to inform broomees?</a></li>
+                        <li><a href="faq.html">How can i make my exeperience better?</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="faqs d-none city ml-20" id="service" >
+                    <ul>
+                        <li><a href="faq.html">How can i Pause my booking?</a> </li>
+                        <li><a href="faq.html">How can i share my feedback for worker?</a></li>
+                        <li><a href="faq.html">My worker is not performing well, how can i get a replecement?</a></li>
+                        
+                        <li><a href="faq.html">How can i update my payment method?</a></li>
+                        <li><a href="faq.html">I am shifting my place of residance, do i need to inform broomees?</a></li>
+                        <li><a href="faq.html">How can i make my exeperience better?</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="faqs d-none city ml-20" id="replacement" >
+                    <ul>
+                       
+                        <li><a href="faq.html">My worker is not performing well, how can i get a replecement?</a></li>
+                        <li><a href="faq.html">I want to Suggest some UI Changes, Where can I share them?</a></li>
+                        <li><a href="faq.html">How can i update my payment method?</a></li>
+                        <li><a href="faq.html">I am shifting my place of residance, do i need to inform broomees?</a></li>
+                        <li><a href="faq.html">How can i make my exeperience better?</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="faqs d-none city ml-20" id="Method" >
+                    <ul>
+                        <li><a href="faq.html">How can i Pause my booking?</a> </li>
+                        <li><a href="faq.html">How can i share my feedback for worker?</a></li>
+                        <li><a href="faq.html">My worker is not performing well, how can i get a replecement?</a></li>
+                        <li><a href="faq.html">I want to Suggest some UI Changes, Where can I share them?</a></li>
+                        <li><a href="faq.html">How can i update my payment method?</a></li>
+                        <li><a href="faq.html">I am shifting my place of residance, do i need to inform broomees?</a></li>
+                        <li><a href="faq.html">How can i make my exeperience better?</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="faqs d-none city ml-20" id="Chenges" >
+                    <ul>
+                        <li><a href="faq.html">How can i Pause my booking?</a> </li>
+                        <li><a href="faq.html">How can i update my payment method?</a></li>
+                        <li><a href="faq.html">I am shifting my place of residance, do i need to inform broomees?</a></li>
+                        <li><a href="faq.html">How can i make my exeperience better?</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+                <!-- start search html -->
+
+                <!-- <section class="wrapper"> -->
+
+                
+                <div id="yeller" class="hammer mb-100">
+                    <div class="search-section canvas" id="canvas">
+                        <div class="search-aria  blockwrapper" id="blockwrapper">
+                    <div class="searchbox-2 ">
+                    <figure>
+                        <img src="./images/arrow-down-sign-to-navigate.png"  class=" down-arrow-img" id="close-popup" onclick="closePop()" alt="">
+                    </figure>
+                    </div>
+        
+                    <div class=" ml-20 mt-20">
+                        <div class="searchbar d-flex align-center">
+        
+                       <input type="text" class="searchbox my-searchbox" placeholder="Start typing to search" disabled> 
+        
+        
+                       <div class="searchIcon">
+                               <img src="./images/Vector.png" class="img-fluid" alt=""> 
+                            </div>
+                        
+                        </div>
+                    </div>
+        
+        
+                    <div class="faqs faqs-2 city mt-50 ml-20" id="Chenges">
+                        <ul>
+                            <li><a href="faq.html">How can i Pause my booking?</a> </li>
+                            <div class="">
+                                <div class="line ml-15"></div>
+                            </div>
+                            <li><a href="faq.html">How can i share my feedback for worker?</a></li>
+                            <div class=" ">
+                                <div class="line ml-15"></div>
+                            </div>
+                           
+                            <li><a href="faq.html">How can i update my payment method?</a></li>
+                            <div class="">
+                                <div class="line ml-15"></div>
+                            </div>
+                           
+                            <li><a href="faq.html">How can i make my exeperience better?</a></li>
+                            <div class="">
+                                <div class="line ml-15 "></div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parent-popUp"  onclick="hidePop()"></div>
+    <!-- </section>    -->
+
+
+
+
+                <!-- end search html -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+                <!-- <script src=".js/hammer.js"></script> -->
+                
+                <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+                <script src="./js/bottomNav.js"></script>
+                <!-- <script src="./js/jquery.js"></script> -->
+
+                <!-- <script src="./js/main.js"></script> -->
+                <script>
+                    navbar = document.querySelectorAll('.div');
+                    console.log(navbar);
+                    navbar.forEach(element => {
+                        element.addEventListener("click", function(){
+                            navbar.forEach(nav=>nav.classList.remove("active"));
+                            this.classList.add("active");
+                        })
+                    });
+
+                    bottomNavbar = document.querySelectorAll('svg');
+                    console.log(bottomNavbar);
+                    bottomNavbar.forEach(element => {
+                    element.addEventListener("click", function(){
+                    bottomNavbar.forEach(nav=>nav.classList.remove("active-2"));
+                    this.classList.add("active-2");
+                })
+            });
+
+
+            function openCity(cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+            x[i].classList.add("d-none")
+            
+            }
+
+            document.getElementById(cityName).classList.remove("d-none")
+        }
+
+//   var sliderControler = document.querySelectorAll('.open-searchBox')
+  
+//   for(i = 0; i < sliderControler.length;i++) {
+//       sliderControler[i].addEventListener('click', function(){
+//           document.querySelector(".search-aria").style.top = "20%"
+//       document.querySelector("#main").classList.add("d-none")
+//         console.log("I love js");
+//       });
+//     }
+
+function openSearchArea(){
+    $(".search-aria").css("top","20%")
+    $(".parent-popUp").css("visibility","visible")
+}
+  
+    setTimeout(function() {
+      $("#india").removeClass("d-none")
+      $("#design-show").removeClass("d-none")
+      $(".container-login-3").css("display","block")
+      $(".trust").css("display","none");
+    }, 2000);
+  
+  
+  
+  
+    function closePop(){
+      document.querySelector(".search-aria").style.top = "100%"
+      document.querySelector("#main").classList.remove("d-none")
+      $(".parent-popUp").css("visibility","hidden")
+  
+    }
+  
+      
+      
+  
+  
+              //hammer
+              const cardElement = document.querySelector('.hammer');
+              const hammer = new Hammer(cardElement);
+              hammer.on('pan', function(event) {
+              });
+  
+  
+                hammer.on('pan', function(event) {
+                document.querySelector(".search-aria").style.top = "100%"
+                document.querySelector("#main").classList.remove("d-none")
+                $(".parent-popUp").css("visibility","hidden")
+                });
+  
+                </script>
+              
+    
+</body>
+</html>

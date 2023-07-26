@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+    
+      .bottom-menu {
+      width: 100%;
+      height: 70px;
+      position: fixed;
+      left: 0;
+      bottom: -100px;
+      box-shadow: 0 0 13px -2px #c4c4c4;
+      background-color: var(--white);
+      display: flex;
+      z-index: 10;
+      padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.bottom-menu figure {
+    margin: 10px 0;
+    flex: 1 1 20%;
+    text-align: center;
+}
+.active-fill path {
+    fill: var(--primary-color);
+}
+figure.active-fill figcaption {
+    color: var(--primary-color);
+}
+figcaption {
+    display: block;
+    font-size: 12px;
+}
+    </style>
+</head>
+<body>
+
+
+
+<div class="bottom-menu" style="bottom: 0px;">
+<!-- <a href="home.html" > -->
+        <figure class="" id="home-icon" onclick="redirectPage2('home.html')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 460.298 460.297" fill="#c4c4c4">
+                <g xmlns="http://www.w3.org/2000/svg">
+                    <path d="M230.149 120.939L65.986 256.274c0 .191-.048.472-.144.855-.094.38-.144.656-.144.852v137.041c0 4.948 1.809 9.236 5.426 12.847 3.616 3.613 7.898 5.431 12.847 5.431h109.63V303.664h73.097v109.64h109.629c4.948 0 9.236-1.814 12.847-5.435 3.617-3.607 5.432-7.898 5.432-12.847V257.981c0-.76-.104-1.334-.288-1.707L230.149 120.939z" data-original="#000000"></path>
+                    <path d="M457.122 225.438L394.6 173.476V56.989c0-2.663-.856-4.853-2.574-6.567-1.704-1.712-3.894-2.568-6.563-2.568h-54.816c-2.666 0-4.855.856-6.57 2.568-1.711 1.714-2.566 3.905-2.566 6.567v55.673l-69.662-58.245c-6.084-4.949-13.318-7.423-21.694-7.423-8.375 0-15.608 2.474-21.698 7.423L3.172 225.438c-1.903 1.52-2.946 3.566-3.14 6.136-.193 2.568.472 4.811 1.997 6.713l17.701 21.128c1.525 1.712 3.521 2.759 5.996 3.142 2.285.192 4.57-.476 6.855-1.998L230.149 95.817l197.57 164.741c1.526 1.328 3.521 1.991 5.996 1.991h.858c2.471-.376 4.463-1.43 5.996-3.138l17.703-21.125c1.522-1.906 2.189-4.145 1.991-6.716-.195-2.563-1.242-4.609-3.141-6.132z" data-original="#000000"></path>
+                </g>
+            </svg>
+            <figcaption>Home</figcaption>
+        </figure>
+<!-- </a> -->
+        <figure class="" id="booking-icon" onclick="redirectPage2('my-bookings.html')">
+            <svg width="30px" height="30px" viewBox="0 0 18 20" fill="#c4c4c4c4" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 2H11.82C11.4 0.84 10.3 0 9 0C7.7 0 6.6 0.84 6.18 2H2C0.9 2 0 2.9 0 4V18C0 19.1 0.9 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM9 2C9.55 2 10 2.45 10 3C10 3.55 9.55 4 9 4C8.45 4 8 3.55 8 3C8 2.45 8.45 2 9 2ZM7 16L3 12L4.41 10.59L7 13.17L13.59 6.58L15 8L7 16Z"></path>
+            </svg>
+            <figcaption>Bookings</figcaption>
+        </figure>
+       
+        
+        <figure class="" id="attendance-icon" onclick="redirectPage2('attendance.html')">
+        <svg id="attendance-icon" width="30px" height="30px"viewBox="0 0 28 26" fill="#c4c4c4c4" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_i_57_3161)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.460205 12.3341C0.460205 11.2481 0.460205 10.2829 0.47758 9.42187H27.3759C27.3933 10.2829 27.3933 11.2481 27.3933 12.3341V14.9227C27.3933 19.8039 27.3933 22.2445 25.8156 23.7609C24.2379 25.2773 21.6986 25.2773 16.6201 25.2773H11.2334C6.15489 25.2773 3.61561 25.2773 2.03791 23.7609C0.460205 22.2445 0.460205 19.8039 0.460205 14.9227V12.3341ZM20.66 14.9227C21.4038 14.9227 22.0067 14.3432 22.0067 13.6284C22.0067 12.9136 21.4038 12.3341 20.66 12.3341C19.9163 12.3341 19.3134 12.9136 19.3134 13.6284C19.3134 14.3432 19.9163 14.9227 20.66 14.9227ZM20.66 20.1C21.4038 20.1 22.0067 19.5205 22.0067 18.8057C22.0067 18.0908 21.4038 17.5114 20.66 17.5114C19.9163 17.5114 19.3134 18.0908 19.3134 18.8057C19.3134 19.5205 19.9163 20.1 20.66 20.1ZM15.2734 13.6284C15.2734 14.3432 14.6705 14.9227 13.9268 14.9227C13.183 14.9227 12.5801 14.3432 12.5801 13.6284C12.5801 12.9136 13.183 12.3341 13.9268 12.3341C14.6705 12.3341 15.2734 12.9136 15.2734 13.6284ZM15.2734 18.8057C15.2734 19.5205 14.6705 20.1 13.9268 20.1C13.183 20.1 12.5801 19.5205 12.5801 18.8057C12.5801 18.0908 13.183 17.5114 13.9268 17.5114C14.6705 17.5114 15.2734 18.0908 15.2734 18.8057ZM7.19348 14.9227C7.93722 14.9227 8.54014 14.3432 8.54014 13.6284C8.54014 12.9136 7.93722 12.3341 7.19348 12.3341C6.44974 12.3341 5.84683 12.9136 5.84683 13.6284C5.84683 14.3432 6.44974 14.9227 7.19348 14.9227ZM7.19348 20.1C7.93722 20.1 8.54014 19.5205 8.54014 18.8057C8.54014 18.0908 7.93722 17.5114 7.19348 17.5114C6.44974 17.5114 5.84683 18.0908 5.84683 18.8057C5.84683 19.5205 6.44974 20.1 7.19348 20.1Z" fill=""/>
+        <path d="M2.03791 3.49592C2.97276 2.59741 4.24521 2.23129 6.18349 2.08212C6.18349 2.08212 6.05979 1.54956 6.18349 1.24837C6.48321 0.518618 7.92095 0.488217 8.20347 1.2248C8.31136 1.50608 8.20347 1.99623 8.20347 1.99623C9.09936 1.97953 10.1036 1.97953 11.2334 1.97953H16.6201C17.75 1.97953 18.7542 1.97953 19.65 1.99623C19.65 1.99623 19.5493 1.52401 19.65 1.25095C19.9231 0.510864 21.3699 0.52144 21.67 1.25095C21.7935 1.55112 21.67 2.08212 21.67 2.08212C23.6083 2.23129 24.8808 2.59741 25.8156 3.49592C26.7505 4.39444 27.1314 5.61744 27.2866 7.48039H0.566937C0.722147 5.61744 1.10306 4.39444 2.03791 3.49592Z" fill=""/>
+        </g>
+        <defs>
+        <filter id="filter0_i_57_3161" x="0.460205" y="0.572266" width="26.9331" height="26.7051" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        
+        <feOffset dy="2"/>
+        <feGaussianBlur stdDeviation="2"/>
+        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+        <feBlend mode="normal" in2="shape" result="effect1_innerShadow_57_3161"/>
+        </filter>
+        </defs>
+        </svg>
+
+        <figcaption class="f-size-12 f-weight-500">Attendance</figcaption>
+        </figure>
+         <figure class="" id="profile-icon" onclick="redirectPage2('profile.html')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 45.532 45.532" fill="#c4c4c4c4">
+                <path d="M22.766.001C10.194.001 0 10.193 0 22.766s10.193 22.765 22.766 22.765c12.574 0 22.766-10.192 22.766-22.765S35.34.001 22.766.001zm0 6.807a7.53 7.53 0 11.001 15.06 7.53 7.53 0 01-.001-15.06zm-.005 32.771a16.708 16.708 0 01-10.88-4.012 3.209 3.209 0 01-1.126-2.439c0-4.217 3.413-7.592 7.631-7.592h8.762c4.219 0 7.619 3.375 7.619 7.592a3.2 3.2 0 01-1.125 2.438 16.702 16.702 0 01-10.881 4.013z" data-original="#000000" xmlns="http://www.w3.org/2000/svg"></path></svg>
+            <figcaption>Profile</figcaption>
+        </figure>
+    </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const icons = document.querySelectorAll('figure');
+  const selectedIcon = localStorage.getItem('selectedIcon');
+
+  icons.forEach(function(icon) {
+    icon.addEventListener('click', function() {
+      const selectedIconId = this.id;
+
+      // Remove 'selected' class from all icons
+      icons.forEach(function(icon) {
+        icon.classList.remove('active-fill');
+      });
+
+      // Add 'selected' class to the clicked icon
+      this.classList.add('active-fill');
+
+      // Save the selected icon to localStorage
+      localStorage.setItem('selectedIcon', selectedIconId);
+      console.log(selectedIconId)
+    });
+
+    // Set the selected icon color on page load
+    if (selectedIcon && icon.id === selectedIcon) {
+      icon.classList.add('active-fill');
+    }
+  });
+});
+
+    function redirectPage2(url) {
+      // Change the URL to the parameter value
+      window.location.href = url;
+    }
+
+  </script>
+    
+</body>
+</html>
+
+

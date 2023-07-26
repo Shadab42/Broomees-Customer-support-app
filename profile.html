@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer-support</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    
+</head>
+<body>
+  
+
+
+    <div class="main" id="main">
+    <div class="booking-top-section d-flex align-center">
+        <figure class="d-flex align-center">
+            <a onclick="window.history.back()" class="d-flex">
+                <img src="./images/arrow-angle-pointing-to-left.png" class="w-16 back-button" alt="">
+            </a>
+            
+            <h2 class="pl-5">Profile</h2> 
+        </figure>
+        <div class="right-image">
+            <img src="./images/Group 423.svg" alt="">
+        </div>
+    </div>
+
+    <div class="activity-booking-parent profile-card mt-20">
+     <img  id="img-profile"  style="height: 110px; width: 110px; background: #fff;border-radius: 12px;"  alt="">
+                      
+                  
+
+<div class="rigth-side-contents mt-5">
+    <div class="d-flex space-between">
+        <div>
+            <p class="f-size-10 f-weight-300">Full name</p>
+            <p class="f-size-12 f-weight-600" id="name-p">Name</p>
+        </div>
+        <div>
+            <p class="f-size-10 f-weight-300">Mobile Number</p>
+            <p class="f-size-12 f-weight-600" >+91 <span id="contact-p" ></span></p>
+        </div>
+        
+    </div>
+    <div class="mt-5">
+        <p class="f-size-10 f-weight-300" id="email-l">Email</p>
+        <p class="f-size-12 f-weight-600" id="email-p" >Broomees@gmail.com</p>
+    </div>
+    <div class="edit-datial">
+        <button class="editDetail f-size-9 f-weight-400" onclick="editMyDeatail()">Edit my detail</button>
+    </div>
+    
+</div>
+</div>
+<div class="mt-20 ml-10" >
+    <p class="f-size-11 f-weight-300">Househelp Subscription 6 months |<span class="my-weight"> 37 days left</span></p>
+</div>
+<div class="progressbar-parent mt-5 ml-10">
+    <div class="progressbar-points">
+        <p class="myactivebar"></p>
+        <p class="myactivebar"></p>
+        <p class="myactivebar"></p>
+        <p class="myactivebar"></p>
+        <p class="myactivebar"></p>
+        <p class="myunactivebar"></p>
+        <p class="myunactivebar"></p>
+        <p class="myunactivebar"></p>
+    </div>
+    <button class="btn-black">Renew</button>
+</div>
+<div class="line mt-10 mb-10"></div>
+<div class=" ml-10">
+    <p class="f-size-11 f-weight-300">Cook Subscription 6 months | <span class="my-weight"> 23 days left</span></p>
+</div>
+
+<div class="progressbar-parent mt-5 ml-10">
+    <div class="progressbar-points">
+        <p class="myactivebar"></p>
+        <p class="myactivebar"></p>
+        <p class="myactivebar"></p>
+        <p class="myunactivebar"></p>
+        <p class="myunactivebar"></p>
+        <p class="myunactivebar"></p>
+        <p class="myunactivebar"></p>
+        <p class="myunactivebar"></p>
+    </div>
+    <button class="btn-black">Renew</button>
+</div>
+
+<div class="mt-20 ml-10">
+    <p class="f-size-11 f-weight-600">Manage my addresses</p>
+</div>
+<div class="address-card-parent mt-10">
+    <div class="address-card">
+        <div id="my-geo-address" class=" my-geo-address d-flex">
+            <figure>
+                <img src="./images/grayHeart.png" alt="">
+            </figure> 
+            <div class="parentss">
+                <h3 class="f-size-15 f-weight-500">Home</h3>
+                <p><span id="address-sp" >Select Address</span> <span id="pincode-sp" >Pincode</span></p>
+            </div>
+        </div>
+    
+    </div>
+    <div class="address-edit-sec" >
+        <img src="./images/plus-icon.png"  onclick="getLocation()" alt="">
+        <div class="line"></div>
+        <img src="./images/black-edit-pen.png" onclick="showAddPop()" alt="">
+    </div>
+
+</div>
+<div class="mt-20 ml-10">
+    <p class="f-size-11 f-weight-600">You might be looking for these then</p>
+</div>
+
+<div class="looking-opt-section mt-10">
+    <div class="d-flex align-center parentofCircle" onclick="openPage('query.html',0)">
+        <div class="my-circle d-flex align-center justify-center">
+            <img src="./images/first-img.png" class="" alt="">
+
+        </div>
+        <p class="f-size-13 f-weight-300">Help & feedback</p>
+    </div>
+    <div class="line"></div>
+    <div class="d-flex align-center parentofCircle" onclick="openPage('query.html',0)">
+        <div class="my-circle d-flex align-center justify-center">
+            <p class="text-white">?</p>
+            
+
+        </div>
+        <p class="f-size-13 f-weight-300">General FAQ's</p>
+    </div>
+    <div class="line"></div>
+    <div class="d-flex align-center parentofCircle" onclick="openPage('query.html',0)">
+        <div class="my-circle d-flex align-center justify-center">
+            <img src="./images/payment-img.png" class="" alt="">
+
+        </div>
+        <p class="f-size-13 f-weight-300">Payments & Refunds</p>
+    </div>
+    <div class="line"></div>
+    <div class="d-flex align-center parentofCircle" onclick="openPage('query.html',0)">
+        <div class="my-circle d-flex align-center justify-center">
+            <img src="./images/refer-helper.png" class="" alt="">
+
+        </div>
+        <p class="f-size-13 f-weight-300">Refer a helper</p>
+    </div>
+    <div class="line"></div>
+    <div class="d-flex align-center parentofCircle" onclick="openPage('term_condition.html',0)">
+        <div class="my-circle d-flex align-center justify-center">
+            
+            <p class="text-white">!</p>
+
+        </div>
+        <p class="f-size-13 f-weight-300">Terms & Conditions</p>
+    </div>
+    <div class="line"></div>
+    <div class="d-flex align-center parentofCircle" onclick="openPage(`https://broomees.com/about`,0)">
+        <div class="my-circle d-flex align-center justify-center">
+            <img src="./images/about-us.png" class="" alt="">
+            
+
+        </div>
+        <p class="f-size-13 f-weight-300">About us</p>
+    </div>
+    <div class="line"></div>
+    <div class="d-flex align-center parentofCircle" onclick="openPage('query.html',0)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 45.532 45.532" fill="#c4c4c4c4">
+                <path d="M22.766.001C10.194.001 0 10.193 0 22.766s10.193 22.765 22.766 22.765c12.574 0 22.766-10.192 22.766-22.765S35.34.001 22.766.001zm0 6.807a7.53 7.53 0 11.001 15.06 7.53 7.53 0 01-.001-15.06zm-.005 32.771a16.708 16.708 0 01-10.88-4.012 3.209 3.209 0 01-1.126-2.439c0-4.217 3.413-7.592 7.631-7.592h8.762c4.219 0 7.619 3.375 7.619 7.592a3.2 3.2 0 01-1.125 2.438 16.702 16.702 0 01-10.881 4.013z" data-original="#000000" xmlns="http://www.w3.org/2000/svg"></path>
+            </svg>   
+        <!-- <a href="./query.html"> -->
+            <p class="f-size-13 f-weight-300">Contact us</p>
+        <!-- </a> -->
+    </div>
+    <div class="line"></div>
+    <div class="d-flex align-center parentofCircle" onclick="logout()">
+        <img style="width: 35px;" src="./images/logout.svg" alt="">  
+    <a >
+        <p class="f-size-13 f-weight-300" >Logout</p>
+    </a>
+</div>
+
+
+</div>
+<div class="mt-20 last-sec">
+    <p class="text-primary ">Relax we’re</p>
+    <p class="text-primary">here for you</p>
+</div>
+<div class="mt-20">
+    <p class="designed-with">Designed with <img src="./images/yello-heart.png" class="w-20" alt=""> in Delhi.</p>
+</div>
+
+<div class="my-popup y-translate main d-none" id="main">
+
+    <div class="main-popup-outer d-none" id="main-popup-outer">
+        <form id="myForm2">
+
+                <h3>Personal detail</h3>
+               
+            
+              
+                <div class=" mt-10" id="inner-3">
+                    <p class="ml-10 mb-5 f-size-10 f-weight-300">Full Name</p>
+                    <div class="firstinput">
+                        <input type="text" id="name"  placeholder="Enter Your Name">
+                        <span id="fullname-error" class="error form-error-msg f-size-10 f-weight-300"></span>
+                        <img src="./images/Vector.svg"  class="d-none" id="check-2" alt="">
+                    </div>
+                </div>
+
+                <div class=" mt-10" id="inner-3">
+                    <p class="ml-10 mb-5 f-size-10 f-weight-300">Email ID (optional)</p>
+                    <div class="firstinput">
+                        <input type="text" id="email"  placeholder="Enter Your Email">
+                        <span id="email-error" class="error form-error-msg f-size-10 f-weight-300"></span>
+                        <img src="./images/Vector.svg"  class="d-none" id="check-3" alt="">
+                    </div>
+                </div>
+
+              
+                <div class="sub-sec mt-20" id="sub-sec">
+                    <button type="button" class="btn-gray mr-10 profile-detail-cancle f-size-12 f-weight-400" onclick="hidePop()">Cancel</button>
+                    <button type="button"  class="btn-primary" onclick="update()" style="width: 40%;">Add</button>
+                </div>
+            </form>
+      </div>
+
+        <div class="address-pop booking-summery-add-pop d-none" >
+            <div class="address-pop-inner" id="address-pop-inner">
+
+       <div class="d-flex align-center justify-center add-search-sec">
+        <input type="text" placeholder="Search your location here" disabled>
+        <div><img src="./images/Vector.png" alt=""></div>
+        
+    </div>
+    <div class="mt-20 select-add" >
+        <p class="mb-10">Select from your saved addresses</p>
+    </div>
+    <div id="addressContainer" style="overflow-y: auto;max-height: 400px;" >
+        <div class="address-card d-block">
+            <div class="d-flex align-center summery-home-sec mt-5">
+                <img src="./images/home-icon.png" style="width: 13px;" alt="">
+                <h2 class="pl-10">Home</h2>
+            </div>
+            <div class="d-flex align-center space-between mt-5">
+                <div>
+                    <h6>D-309 Sarvodaya Enclave, New Delhi, 110017, </h6>
+                    <h6>Delhi, India</h6>
+                </div>
+                <img src="./images/black-edit-pen.png" class="black-edit-pen"  alt="">
+            </div>
+        </div>
+        <div class="line mt-5 mb-5"></div>
+        <div class="address-card d-block">
+            <div class=" mt-5">
+                <h2 class="f-size-12 f-weight-600">Office</h2>
+                <div class="d-flex align-center space-between">
+                    <div>
+                        <h6>D-309 Sarvodaya Enclave, New Delhi, 110017, </h6>
+                        <h6>Delhi, India</h6>
+            
+                    </div>
+                    <img src="./images/black-edit-pen.png" class="black-edit-pen"  alt="">
+    
+                </div>
+            </div>
+        </div>
+        <div class="line mt-5 mb-5"></div>
+    </div>
+
+       
+       
+        
+
+        
+    <div class="summery-btn mt-20" id="firOptBtn">
+        <button class="btn-black" onclick="getLocation()">Add Address</button>
+        <button class="btn-gray" onclick="hidePop()">Done</button>
+    </div>
+    </div>
+    <div id="com-add" class="d-none com-add mt-20">
+        
+    <form >
+        <div id="newAddress" class=" mt-50" style="margin-top: 144px;">
+            <h3 class="mb-10">House Details</h3>
+            <div class=" different-input-styling">
+                <label>Complete Address</label>
+                <input type="text" name="" id="address" maxlength="50">
+                <span id="addressError" class="form-error-msg f-size-10 f-weight-300" ></span>
+            </div>
+            <div class="different-input-styling mt-10">
+                <label>City</label>
+                <input class="form-control" type="text" id="city">
+                <span id="cityError" class="form-error-msg f-size-10 f-weight-300"></span>
+            </div>
+            <div class="different-input-styling mt-10">
+                <label>Pincode</label>
+                <input class="form-control" type="text"  maxlength="6" id="pincode">
+                <span id="pincodeError" class="form-error-msg f-size-10 f-weight-300"></span>
+            </div>
+            <div class=" different-input-styling mt-10">
+                <label>Floor(optional)</label>
+                <input class="form-control" type="text" id="floor">
+                <span id="floorError" class="form-error-msg f-size-10 f-weight-300"></span>
+            </div>
+        </div>
+
+        <div class="save-add mt-20">
+            <button class="btn-gray" type="button" onclick="hidePop()" >Cancel</button>
+            <button id="comAdd" type="button" class="btn-black w-100 " onclick="addNewAddress()"  >Save Address</button>
+        </div>
+    </form>
+
+
+        
+    </div>
+
+
+
+ 
+    <div id="map" class="demo d-none"></div>
+</div>
+
+</div>
+<div class="parent-popUp" onclick="hidePop()"></div>
+</div>
+</body>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/menu.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBOosq_YIVNCVtgzTDaca8OI_Mlo_y1Y&amp;libraries=places&amp;callback=initMap&libraries=&v=weekly"defer></script>
+
+
+<script async defer src="js/bottomNav.js"></script>
+
+
+<script>
+
+function openPage(url,via) {
+  
+    if(via==0){
+        window.open(url , '_self');
+    }else{
+        cordova.InAppBrowser.open(url, '_system');     
+    }
+}
+
+   
+
+    var lat;
+    var lng;
+    var address;
+    var pincode;
+    var city;
+    var floor;
+    var addressLen;
+    var addressarr = [];
+    let addressId = 0;
+    let addressUpdating;
+    //prefill start
+
+    function prefill(){
+        $("#name-p").text(localStorage.getItem("name"));
+        $("#contact-p").text(localStorage.getItem("contact"));
+        $("#email-p").text(localStorage.getItem("email"));
+
+        if(localStorage.getItem('profileimage')){
+            $('#img-profile').attr('src',imageUrl+"userpic/"+localStorage.getItem('profileimage'));
+        }else{
+            $('#img-profile').attr('src','./images/profile-img-3.png');
+        }
+
+        if(!(localStorage.getItem('email'))){
+           $('#email-l').hide(); 
+        }else{
+           $('#email-l').show(); 
+        }
+    }
+    prefill();
+    //prefill start
+    // Google Map 
+    // Initialize and add the map
+    //https://goo.gl/maps/GsrigatJJbUyx3s69
+    let loc = "https://goo.gl/maps/e5WryeHc96MC8EP99";
+    $("#loc").attr("href", loc);
+    function initMap() {
+
+
+    
+        console.log("start map")
+        // The location of Uluru
+        let location=JSON.parse(localStorage.getItem('currentLocation'));
+        console.log(location)
+
+        // const broomees = { lat: 28.5739, lng: 77.2386};
+      
+        const broomees = location;
+
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 16,
+            center: broomees,
+            //disableDefaultUI: true,
+            mapTypeControl:false,
+            // scaleControl:true,
+            streetViewControl:false,
+        });
+        let w = map.getDiv().offsetWidth;
+        console.log(w);
+        if(w>=992){
+            map.panBy(200, 0);    
+        }
+
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: broomees,
+            map: map,
+            title: 'Broomees',
+            animation: google.maps.Animation.DROP,
+            icon: "assets/images/broomees-marker.png"
+        });
+        marker.addListener('click', function () {
+            window.open(loc, "_blank").focus();
+        });
+
+        getaddress()
+    }
+
+
+
+    function getaddress(){
+        // location detection 
+        localStorage.setItem('currentLocation',JSON.stringify({'lat':28.5730,'lng':77.2386}));
+
+        if (navigator.geolocation) {
+        // Geolocation is supported
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        } else {
+        // Geolocation is not supported
+            console.log('Geolocation is not supported by this browser.');
+        }
+
+        // Success callback function
+        function successCallback(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            localStorage.setItem('currentLocation',JSON.stringify({'lat':parseFloat(latitude.toFixed(4)),'lng':parseFloat(longitude.toFixed(4))}));
+            console.log("update location")
+
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+                    location: {
+                        // lat: parseFloat(latitude.toFixed(4)),
+                        // lng: parseFloat(longitude.toFixed(4))
+                        lat: JSON.parse(localStorage.getItem('currentLocation')).lat,
+                        lng: JSON.parse(localStorage.getItem('currentLocation')).lng
+                    }
+                })
+                .then((response) => {
+                    let locArray = response.results[0].address_components
+                    console.log(locArray)
+                    localStorage.setItem("locationName", locArray[1].short_name + "," + locArray[2].short_name)
+                    $("#address").val(localStorage.getItem("locationName") + "," + locArray[4].long_name)
+                    $("#city").val(locArray[5].long_name)
+                    $("#pincode").val(locArray[locArray.length-1].long_name)
+
+                    address=(localStorage.getItem("locationName") + "," + locArray[4].long_name)
+                    city=(locArray[5].long_name)
+                    pincode=(locArray[locArray.length-1].long_name)
+
+
+
+                })
+            
+        }
+
+        // Error callback function
+        function errorCallback(error) {
+            console.log('Error occurred. Error code: ' + error.code);
+
+            // Common error codes:
+            // 1: PERMISSION_DENIED
+            // 2: POSITION_UNAVAILABLE
+            // 3: TIMEOUT
+        }
+
+    }
+
+
+    
+
+    function getLocation(){
+        addressUpdating=false;
+        showPop()
+
+        $('#floor').val('');
+        $("#address").val(address);
+        $("#pincode").val(pincode);
+        $("#city").val(city);
+        $('#comAdd').html("Add address");
+        $(".main-popup-outer").addClass("d-none")
+        $(".y-translate").removeClass("d-none")
+        $(".address-pop").removeClass("d-none")
+        $("#map").removeClass("d-none")
+        $("#com-add").removeClass("d-none")
+        $("#com-add").removeClass("d-none")
+        $("#firOptBtn").addClass("d-none")
+        $('#addressContainer').hide();
+
+    }
+
+    // edit name email validation 
+
+    $('#name').on('input', function() {
+        $('#fullname-error').text('');
+        $('#fullname-error').hide();
+
+        var fullname = $('#name').val().trim();
+        if(fullname.length < 5){
+            $("#check-2").addClass("d-none");
+            $("#check-2").css("bottom","17px");
+            $('#check-2').hide();
+
+        }else{
+            $("#check-2").removeClass("d-none");
+            $("#check-2").css("bottom","17px");
+            $('#check-2').show();
+        }
+        
+    });
+
+    $('#email').on('input', function() {
+        var email = $('#email').val().trim();
+
+        if (validateEmail(email)) {
+            $('#email-error').text('');
+            $("#check-3").removeClass("d-none");
+            $("#check-3").css("bottom","17px");
+        } else{
+            $('#email-error').text('');
+            $("#check-3").addClass("d-none");
+            $("#check-3").css("bottom","17px");
+
+        }
+    
+    });
+    // edit name email validation 
+
+
+    function update() {
+        console.log("validation start")
+        const name = $("#name").val().trim();
+       
+        if (name == "") {
+            $('#fullname-error').html("*Name is required");
+            $('#fullname-error').show();
+            return false;
+        }else if (name.length < 5) {
+            $('#fullname-error').html("*Name at least 5 character");
+            $('#fullname-error').show();
+
+            return false;
+        }
+        
+        const email = $("#email").val().trim();
+        if (email != "") {
+            var emailExp = /^(([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5}){1,25})+([;.](([a-zA-Z0-9_\-\.]+)@{[a-zA-Z0-9_\-\.]+0\.([a-zA-Z]{2,5}){1,25})+)*$/;
+            if (!email.match(emailExp)) {
+                $('#email-error').html("Email is invalid");
+                $('#fullname-error').show();
+                return false;
+            }
+        }
+        console.log("validation end")
+
+        if (!checkConnection()) {
+            showNotifier("No Network!", 'err');
+            return false;
+        }
+       
+        $.ajax({
+            type: 'POST',
+            url: URL + "updateUser",
+            data: { id: localStorage.getItem("id"), name, email},
+            dataType: 'json',
+            beforeSend: function(request) {request.setRequestHeader("X-API-KEY", API_KEY);},
+            success: function(data, status, xhr) {
+            
+                console.log('status: ' + status + ', data: ' + ":" + data + ":");
+                if (status == "success") {
+                    if (data.status) {
+                        localStorage.setItem("name", name);
+                        localStorage.setItem("email", email);
+                    
+                        showNotifier('User data updated!');
+                        prefill();
+                        hidePop();
+                    }
+                } else {
+                    console.log("ajax failed");
+                }
+            },
+            error: function(xhr, textStatus, errorMessage) {
+                console.log('Error:' + errorMessage + ":::" + xhr.responseJSON.message);
+                $("#name").addClass('form-error-input');
+                $('#nameErr').html(xhr.responseJSON.message);
+            }
+        });
+    }
+
+    function fillAddress(){
+        $("#address-pop-inner").addClass("d-none");
+        $("#map").addClass("d-none");
+        $("#comAdd").addClass("d-none");
+        $("#my-geo-address").addClass("d-none");
+        $("#newAddress").removeClass("d-none");
+
+    }
+
+  
+
+    function showAddPop(){
+        showDecriptionPop()
+        $(".main-popup-outer").addClass("d-none")
+        $(".address-pop").removeClass("d-none")
+        $(".y-translate").removeClass("d-none")
+        $(".address-pop").show();
+        $("#map").addClass("d-none")
+        $("#com-add").addClass("d-none")
+        $("#firOptBtn").removeClass("d-none")
+        $('#addressContainer').show();
+
+    }
+
+    function showAddDetail(){
+        $("#demo").css("height","100px")
+        $("#demo").css("top","-116px")
+        $(".add-fill").removeClass("d-none")
+        $("#thirOptBtn").removeClass("d-none")
+        $("#secOptBtn").addClass("d-none")
+        $("#address-pop-inner").addClass("d-none")
+    }
+
+
+    function showDecriptionPop(){
+        showPop();
+        $(".main-popup-outer").removeClass("d-none")
+        $(".y-translate").removeClass("d-none")
+    }
+
+    function showOnlyBigPop(){
+        showDecriptionPop();
+        $(".address-pop").hide();
+    }
+
+    function showPop(){
+        $(".my-popup").css("top","12%")
+        $(".parent-popUp").css("visibility","visible")
+    }
+    function hidePop(){
+        $(".my-popup").css("top","100%")
+        $(".parent-popUp").css("visibility","hidden")
+    }
+    function editMyDeatail(){
+        $('#name').val(localStorage.getItem('name'))
+        $('#email').val(localStorage.getItem('email'))
+        showPop()
+        $(".y-translate").removeClass("d-none")
+        $("#main-popup-outer").removeClass("d-none")
+        $(".booking-summery-add-pop").addClass("d-none")
+    }
+
+
+    // address code 
+   
+
+    $('#address,#pincode,#city').on('input',function(){
+        $('#addressError').html("");
+        $('#pincodeError').html("");
+        $('#cityError').html("");
+
+    })
+
+    function addressValidation(){
+        address = $("#address").val().trim();
+        pincode = $("#pincode").val().trim();
+        city = $("#city").val().trim();
+        floor = $("#floor").val().trim();
+
+        let isvalid=true;
+
+        //address validation
+        if (address.length < 10) {
+            $("#address").addClass('form-error-input');
+            $('#addressError').html("Address must be 10 characters long");
+            isvalid=false;
+        }
+        //address validation
+        if (address.length == 0) {
+            $("#address").addClass('form-error-input');
+            $('#addressError').text("*Address is required");
+            isvalid=false;
+        }
+        if (city == "" || city.length < 3) {
+            $('#customCityName').addClass('form-error-input');
+            $('#cityError').html("Please enter a valid city");
+            isvalid=false;
+        }
+        //Pincode validation
+        var pincodeExp = /^\d{6}$/;
+        if (!pincodeExp.test(pincode)) {
+            $("#pincode").addClass('form-error-input');
+            $('#pincodeError').html("Pin Code is invalid");
+            isvalid=false;
+        }
+
+        if(!isvalid){
+            return false;
+        }else{
+            if(floor){
+                address=floor+"-"+address;
+                console.log(address)
+
+            }
+            return true;
+        }
+
+    }
+
+
+        
+    function addNewAddress() {
+        let call=false;
+
+        if(!(addressValidation())){
+            return false;
+        }
+
+        if(addressUpdating){
+            // run and update
+            call=true
+        }else{
+            if(addressLen<=4){
+                // added
+                call=true;
+            }else{
+                showNotifier('You can only enter up to 5 address');
+            }
+        }
+
+        if(call){
+            
+            $.ajax({
+                type: (addressId == 0 ? 'POST' : 'PUT'),
+                url: URL + "addresses",
+                data: { address, pincode, city, id: addressId == 0 ? localStorage.getItem("id") : addressId },
+                dataType: 'json',
+                beforeSend: function(request) {request.setRequestHeader("X-API-KEY", API_KEY);},
+                success: function(data, status, xhr) {
+                    console.log('status: ' + status + ', data: ' + ":" + data + ":");
+                    if (status == "success") {
+                        if (data.status) {
+                            showNotifier(data.message);
+                            // refreshAddressData();
+                            getAddresses();
+                            showAddPop();
+                        }
+                    } else {
+                        console.log("ajax failed");
+                    }
+                },
+                error: function(xhr, textStatus, errorMessage) {
+                    console.log('Error:' + errorMessage + ":::" + xhr.responseJSON.message);
+                    $("#address").addClass('form-error-input');
+                    $('#addressErr').html(xhr.responseJSON.message);
+                }
+            });
+        }
+    }
+
+
+        
+    function getAddresses() {
+        $.ajax({
+            type: 'GET',
+            url: URL + "addresses",
+            data: {
+                id: localStorage.getItem("id"), 
+            },
+            dataType: 'json',
+            beforeSend: function(request) {request.setRequestHeader("X-API-KEY", API_KEY);},
+            success: function(data, status, xhr) {
+                console.log('status: ' + status + ', data: ' + ":" + data + ":");
+                if (status == "success") {
+                    if (data.status) {
+                        populateAddress(data.data);
+                        console.log(data.data)
+                    }
+                } else {
+                    console.log("ajax failed");
+                }
+            },
+            error: function(xhr, textStatus, errorMessage) {
+                console.log('Error:' + errorMessage + ":::" + xhr.responseJSON.message);
+            }
+        });
+    }
+    getAddresses();
+
+        
+    function populateAddress(d) {
+        let content1 = '';
+        addressLen = d.length;
+        addressarr=d
+       
+        d.forEach(function(obj, index) {
+           
+            content1+=` <div class="address-card d-block">
+                    
+                    <div class="d-flex align-center space-between mt-5" >
+                        <div  onclick='selectAddress(this,${index})' >
+                            <h6>${obj.address}</h6>
+                            <h6>${obj.city} , ${obj.pincode} </h6>
+                        </div>
+                      <div class="d-flex remove-add-sec">
+                        <img src="./images/cross.svg" class="black-edit-pen" onclick="removeAddress(${obj.id},${obj.userId},${index})" alt="">
+                        <img src="./images/black-edit-pen.png" class="black-edit-pen edit-btn" onclick="prefillAddress(this)" data-json='${(JSON.stringify(obj))}' alt=""> 
+                        </div>
+                           
+                      
+                    </div>
+                </div>
+                <div class="line mt-5 mb-5"></div>`;
+           
+
+        });
+
+        $("#addressContainer").html(content1);
+
+        if(localStorage.getItem('selectedAddressindex')){
+            let ind=localStorage.getItem('selectedAddressindex');
+            $('#address-sp').text(addressarr[ind].address)
+            $('#pincode-sp').text(addressarr[ind].pincode)
+        }
+        
+        
+    }
+  
+    function removeAddress(id,uId,ind) {
+        //event.stopPropagation();
+        if (confirm("Are you sure you want to remove this address?")) {
+        
+            $.ajax({
+                type: 'DELETE',
+                url: URL + "addresses",
+                data: { id:id ,uId:uId},
+                dataType: 'json',
+                beforeSend: function(request) {request.setRequestHeader("X-API-KEY", API_KEY);},
+                success: function(data, status, xhr) {
+                    console.log('status: ' + status + ', data: ' + ":" + data + ":");
+                    if (status == "success") {
+                        if (data.status) {
+                            getAddresses();
+                            if(localStorage.getItem('selectedAddressindex')==ind){
+                                $('#address-sp').text('Select Address')
+                                $('#pincode-sp').text('Pincode')
+                                localStorage.removeItem('selectedAddressindex');
+
+                            }
+
+                        }
+                    } else {
+                        console.log("ajax failed");
+                    }
+                },
+                error: function(xhr, textStatus, errorMessage) {
+                 
+                    console.log('Error:' + errorMessage + ":::" + xhr.responseJSON.message);
+                }
+            });
+        }
+    }
+
+    function prefillAddress(curr) {
+        getLocation();
+        event.stopPropagation();
+        // viewNewAddress();
+        let json = JSON.parse($(curr).attr('data-json'));
+        // $('#city').val("Others");
+        // $("#customCityName").val(json.city);
+        // $("#customCityNameContainer").show();
+
+        let floornum;
+        var removedValue;
+        if((json.address).includes('-')){
+            floornum = (json.address).split("-")[0];
+
+            var str = json.address;
+            removedValue = str.substring(str.indexOf('-') + 1);
+        }
+        $('#floor').val(floornum?floornum:'');
+
+        $("#address").val(removedValue?removedValue:json.address);
+        
+        addressId = json.id;
+       
+        $("#pincode").val(json.pincode);
+        $("#city").val(json.city);
+
+        $('#comAdd').html("Update");
+        addressUpdating=true;
+        // $(curr).parents('.half-address-container').addClass('active');
+    }
+
+    function selectAddress(curr,index){
+        console.log(index)
+        hidePop();
+        console.log(addressarr[index]);
+        $('#address-sp').text(addressarr[index].address)
+        $('#pincode-sp').text(addressarr[index].pincode)
+        localStorage.setItem('selectedAddressId',addressarr[index].id)
+        localStorage.setItem('selectedAddressindex',index)
+
+
+    }
+ 
+
+    // address code 
+
+
+
+
+    </script>
+
+
+</html>

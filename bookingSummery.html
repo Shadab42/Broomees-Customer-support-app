@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer-support</title>
+    <!-- <link rel="stylesheet" href="./css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="./css/jquery-ui.theme.min.css"> -->
+    <link rel="stylesheet" href="./css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/full-calendar.css">
+
+    <style>
+        .error{
+            color: red;
+        }
+       
+</style>
+
+</head>
+<body>
+    <div class="peronal-page mb-100">
+
+
+        <div class="w-90">
+         <div class="booking-top-section d-flex align-center">
+            <figure class="d-flex align-center">
+                <a href="booking.html" class="d-flex"><img src="./images/arrow-angle-pointing-to-left.png" class="w-16"  alt=""></a>
+                
+                <h2 class="pl-5">Booking Summary</h2> 
+            </figure>
+            <div class="right-image">
+                <img src="./images/Group 423.svg" alt="">
+            </div>
+        </div>
+        <div class="detail-add-to-cart-parent mt-20" >
+
+      <div class="detail-add-to-cart mt-10 mb-10">
+            <div class="yello-glob"></div>
+        <div class="d-flex space-between subscription-para-up-deatil mt-5">
+                <p class="f-size-12 f-weight-400 dark-gray">Address</p>
+            </div>
+            <div class="d-flex space-between subscription-para-d-deatil">
+                <div>
+                    <p class="f-size-16 f-weight-500">Home</p>
+                    <!-- <input type="text" placeholder="D-309, Sarvodaya Enclave"> -->
+                    <h5 class="address title full-width f-size-13 f-weight-300 dark-gray">D-309, Sarvodaya Enclave</h5>
+                    <div jstcache="4" jsinstance="0" class="address-line full-width" jsan="7.address-line,7.full-width"></div>
+                    <div jstcache="4" jsinstance="1" class="address-line full-width" jsan="7.address-line,7.full-width"></div>
+                    <div jstcache="4" jsinstance="2" class="address-line full-width" jsan="7.address-line,7.full-width"></div>
+                    <div jstcache="4" jsinstance="*3" class="address-line full-width" jsan="7.address-line,7.full-width"></div>
+
+                </div>
+                <div class="edit-pent-parent d-flex align-center justify-center mt-10" onclick="showAddPop()">
+                    <img src="./images/black-edit-pen.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        <div class="detail-add-to-cart-parent mt-20">
+
+
+        
+        
+        <div class="detail-add-to-cart mt-10 mb-10">
+            <div class="yello-glob"></div>
+        
+        
+            <div class="d-flex space-between subscription-para-up-deatil mt-5">
+                <p class="f-size-16 f-weight-500">Booking Details</p>
+            </div>
+            <div class="customize-parent">
+
+
+            <div class=" subscription-para-d-deatil">
+                <h4>Brooming, Mopping</h4>
+                <p class="f-size-12 f-weight-400">3BHK (more than 2000sqft), 3 Floors</p>
+            </div>
+            <div class="d-flex space-between subscription-para-d-deatil mt-5">
+                <div>
+                    <p class="f-size-16 f-weight-500">Bathroom Cleaning</p>
+                    <h5>3-4 Bathrooms</h5>
+                </div>
+                <div class="customize-pent-parent d-flex align-center justify-center mt-10">
+                    <p class="f-size-11 f-weight-400">Customize</p>
+                    <img src="./images/arrow-down-sign-to-navigate.png" onclick="showOnlyBigPop()" alt="">
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="detail-add-to-cart-parent mt-20">
+
+
+        
+        
+        <div class="detail-add-to-cart mt-10 mb-10">
+            <div class="yello-glob"></div>
+        
+        
+            <div class="d-flex space-between subscription-para-up-deatil mt-5">
+                <h4>Start Date</h4>
+            </div>
+            <div class=" subscription-para-d-deatil">
+                <div>
+
+                    <p class="f-size-12 f-weight-400">22nd December 2022</p>
+                   
+                    <h4 class="mt-10">Gender</h4>
+                    <p class="f-size-12 f-weight-400  mb-5">Male</p>
+                    <div class="d-flex space-between">
+                        <div>
+                        <h4 class="mt-10">Time Slot</h4>
+                        <p class="f-size-12 f-weight-400  mb-5">7 pm to 9pm</p>
+                        </div>
+                        <div>
+                            <div class="edit-pent-parent d-flex align-center justify-center" id="openPop" style="padding: 10px 25px;">
+                                <img src="./images/black-edit-pen.png" alt="">
+                            </div>
+                         </div>
+                        </div>
+                    </div>
+                <div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+        
+
+
+
+        <div class="mt-20">
+            <div class="term-condition">
+            <div class="custom-menu d-flex align-center">
+
+          
+<div class="d-flex align-center my-label custom-checkbox">
+
+    <input type="checkbox" id="check-btn" class="pl-5 f-size-10 f-weight-600">
+    <label class="">I agree to the <a href="term_condition.html">terms and conditions</a> </label>
+</div>
+</div>
+</div>
+        
+        
+        <div class="detail-add-to-cart mt-10">
+            <div class="d-flex space-between subscription-para-up-deatil">
+                <p class="last-card-p">6 Month Subscription Cost</p>
+                <p class="last-card-p">₹8050.00</p>
+            </div>
+            <div class="d-flex space-between subscription-para-up-deatil">
+                <p class="last-card-p">Monthly Estimated Salary</p>
+                <p class="last-card-p">₹3050.00</p>
+            </div>
+
+            <div class="line mt-10 mb-10"></div>
+            <div class="d-flex space-between subscription-para-d-deatil">
+                <p class="last-card-p">Booking Charges</p>
+                <p class="f-size-14 f-weight-700">₹49.00</p>
+            </div>
+            <p style="line-height: 13px;" class="f-size-11 f-weight-300">Non Refundable</p>
+            <div class="buttons-cart">
+                <a href="booking.html"><button  class="btn-gray">Back</button></a>
+            <button class="btn-black w-100" >Pay Now</button>
+            </div>
+        </div>
+    </div>
+        
+    <div class="my-popup y-translate main d-none" id="main">
+    <div class="main-popup-outer d-none">
+        <h4>For how many People?</h4>
+        <p class="f-size-10 f-weight-400 mb-10">select 1 out of 6 options</p>
+        <div class="size-option">
+            <div class="seroption ">
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>1 Person</button>
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>2 Person</button>
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>3 Person</button>
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>4 Person</button>
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>5 Person</button>
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>6 Person</button>
+            </div>
+        </div>
+        <div class="line mt-10"></div>
+        <h2  class="f-size-14 f-weight-500 mt-10">How many meals per day?</h2>
+        <p class="f-size-10 f-weight-400 mb-10">select 1 out of 3 options</p>
+        <div class="size-option">
+        <div class="seroption ">
+            <button class="dropdownSelect"><div class="green-glob d-none"></div>Breakfast & Lunch</button>
+            <button class="dropdownSelect"><div class="green-glob d-none"></div>Dinner</button>
+            <button class="dropdownSelect"><div class="green-glob d-none"></div>All three meals (breakfast, lunch & dinner)</button>
+        </div>
+    </div>
+        
+            <div class="line mt-10"></div>
+            <h2  class="f-size-14 f-weight-500 mt-10">Veg/Non Veg?</h2>
+            <p class="f-size-10 f-weight-400 mb-10">select 1 out of 2 options</p>
+            <div class="size-option">
+                <div class="seroption ">
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>Veg food only</button>
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>Veg & Non Veg</button>
+                </div>
+            </div>
+            <div class="buttons-option mt-20">
+                <button class="btn-gray" onclick="hidePop()">Close</button>
+                <button class="btn-black w-100" id="popupButton" onclick="hidePop()">Continue</button>
+            </div>
+            <div class="success-popup" id="popup">
+            <img src="./images/Success.gif" style="width: 60%;" alt=""> 
+            <p>Add to Cart!</p>   
+            </div>
+        </div>
+        <div class="address-pop booking-summery-add-pop d-none" >
+        <div class="address-pop-inner" id="address-pop-inner">
+            <div class="d-flex align-center justify-center add-search-sec">
+                <input type="text" placeholder="Search your location here" disabled>
+                <div><img src="./images/Vector.png" alt=""></div>
+                
+            </div>
+            <div class="mt-20 select-add" >
+                <p>Select from your saved addresses</p>
+            </div>
+            <div class="d-flex align-center summery-home-sec mt-5">
+                <img src="./images/home-icon.png" style="width: 13px;" alt="">
+                <h2 class="pl-10">Home</h2>
+            </div>
+            <div class="d-flex align-center space-between mt-5">
+                <div>
+                    <h6>D-309 Sarvodaya Enclave, New Delhi, 110017, </h6>
+                    <h6>Delhi, India</h6>
+                </div>
+                <img src="./images/black-edit-pen.png" class="black-edit-pen " style="width: 5%;" onclick="getLocation()" alt="">
+            </div>
+            <div class="line mt-5 mb-5"></div>
+            <div class=" mt-5">
+                <h2 class="f-size-12 f-weight-600">Office</h2>
+                <div class="d-flex align-center space-between">
+                    <div>
+                        <h6>D-309 Sarvodaya Enclave, New Delhi, 110017, </h6>
+                        <h6>Delhi, India</h6>
+            
+                    </div>
+                    <img src="./images/black-edit-pen.png" class="black-edit-pen" style="width: 5%;" onclick="getLocation()" alt="">
+        
+                </div>
+            </div>
+            </div>
+            <div class="summery-btn mt-20" id="firOptBtn">
+                <button class="btn-black" onclick="getLocation()">Add Address</button>
+                <button class="btn-gray" onclick="hidePop()">Done</button>
+            </div>
+            <div id="com-add" class="d-none com-add mt-20">
+              
+            <form id="myForm">
+                <div id="newAddress" class=" mt-20">
+                    <h3 class="mb-10">House Details</h3>
+                    <div class=" different-input-styling">
+                        <label>Complete Address</label>
+                        <input type="text" name="" id="address" maxlength="50">
+                        <span id="addressError" class="form-error-msg f-size-10 f-weight-300" ></span>
+                    </div>
+                    <div class=" different-input-styling mt-10">
+                        <label>Floor(optional)</label>
+                        <input class="form-control" type="text" id="floor">
+                        <span id="floorError" class="form-error-msg f-size-10 f-weight-300"></span>
+                    </div>
+                    <div class="different-input-styling mt-10">
+                        <label>Nearby landmark(optional)</label>
+                        <input class="form-control" type="text" id="landmark">
+                        <span id="landmarkError" class="form-error-msg f-size-10 f-weight-300"></span>
+                    </div>
+                </div>
+                <div class="save-add mt-20">
+                    <button class="btn-gray"  onclick="hidePop()">Cancel</button>
+                    <button id="comAdd" class="btn-black w-100 " type="submit" >Save Address</button>
+                </div>
+            </form>
+        </div>
+        <div id="map" class="demo d-none"></div>
+        </div>
+        
+        
+        <div class="main-popup-outer-parent-2 d-none">
+         <div class="main-popup-outer2">
+             <h4>Helper Gender Preference</h4>
+             <p class="f-size-10 f-weight-400 mb-10">select 1 out of 2 options</p>
+             <div class="option-parent gender-option">
+             <div class="size-option">
+                 <div class="seroption ">
+                 <button class="dropdownSelect genderOption"><div class="green-glob d-none"></div>Male</button>
+                 <button class="dropdownSelect genderOption"><div class="green-glob d-none"></div>Female</button>
+             </div>
+             </div>
+         </div>
+        
+        
+       <div class="line mt-10"></div>
+        <h4 class="mt-10">Service Start Date</h4>
+        <p class="f-size-10 f-weight-400 mb-10">select your service start date</p>
+        <div class="option-parent day-opt">
+            <div class="option-border dropdownSelect five-opt">
+                <div class="green-glob five-glob d-none" ></div>
+                <div class="explore-broomees-left  three-option date-container " id="dateContainer1" onclick="updateInput(this)">
+                </div>
+            </div>
+            <div class="option-border dropdownSelect five-opt">
+                <div class="green-glob five-glob d-none"></div>
+                <div class="explore-broomees-left three-option date-container " id="dateContainer2" onclick="updateInput(this)">
+                </div>
+        </div>
+            <div class="option-border dropdownSelect five-opt">
+                <div class="green-glob five-glob d-none"></div>
+                <div class="explore-broomees-left three-option date-container " id="dateContainer3" onclick="updateInput(this)">
+                </div>
+        </div>
+            <div class="option-border dropdownSelect five-opt">
+                <div class="green-glob five-glob d-none"></div>
+                <div class="explore-broomees-left three-option date-container " id="dateContainer4" onclick="updateInput(this)">
+                </div>
+        </div>
+            <div class="option-border dropdownSelect five-opt">
+                <div class="green-glob five-glob d-none"></div>
+                <div class="explore-broomees-left three-option date-container " id="dateContainer5" onclick="updateInput(this)">
+                </div>
+        </div>
+   </div>
+
+    <div class="d-flex align-center  mt-10 calander-parent" id="calander-parent">
+        <img src="./images/calander.png"  class="datepicker" id="grayCalender"  onclick="hideBtn()" alt="">
+        <img src="./images/green-calender.png" class="d-none" id="greenCalender" alt="">
+        
+        <input type="text" name="date" class="datepicker" id="inputField" onfocus="hideBtn()" placeholder="Select Custom Date">
+    </div>
+    <div class="line mt-15 mb-10"></div>
+    <h4 >Select Your Time Slot</h4>
+    <p class="f-size-10 f-weight-400 ">Time Range: <span class="slider-time">9:00 AM</span> - <span class="slider-time2">5:00 PM</span>
+    </p>
+    <div class="sliders_step1 mt-15">
+        <div id="slider-range"></div>
+    </div>
+
+    <div class="buttons-option " id="hideMe">
+        <button class="btn-gray" onclick="hideCalander()">Back</button>
+        <button  id="confiDate" class="confirmDate btn-black" onclick="confirmBookDate()">Confirm date</button>
+    </div>
+</div>
+
+        <div class="d-flex buttons-option" id="hideMe2">
+            <button class="btn-gray" onclick="hidePop()">Close</button>
+            <button class="btn-black" id="nextPge">Continue</button>
+        </div>
+        
+        
+        <div class="success-popup" id="popup">
+        <img src="./images/Success.gif" style="width: 60%;" alt=""> 
+        <p>Add to Cart!</p>   
+        </div>
+    </div>
+</div>
+        
+       </div>
+
+
+     
+       <div class="parent-popUp" onclick="hidePop()"></div>
+    </div>
+</div>
+<div id="this-error-popup" class="error-popup" style="display: none;">
+    <div id="popup-content">
+      Please agree to the terms and conditions.
+    </div>
+</div>
+<div class="section-error-pop error f-size-10 f-weight-300" id="errorMsg" style="display: none; color: red;">
+    <p id="" class=""></p>
+</div>
+
+
+           
+        
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- <source src=".js/jquery.js"> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBOosq_YIVNCVtgzTDaca8OI_Mlo_y1Y&amp;libraries=places&amp;callback=initMap&libraries=&v=weekly" defer></script>
+<script src="./js/main.js"></script>
+<script async defer src="js/bottomNav.js"></script>
+<script>
+
+$('.dropdownSelect').on('click', function() {
+      $(".five-glob").show();
+      $(this).siblings().removeClass('active-green');
+      $(this).addClass('active-green');            
+      $(this).children('.green-glob').removeClass('d-none');  
+      $(this).siblings().children('div.green-glob').addClass('d-none');
+  })
+
+    function getLocation(){
+        $("#map").removeClass("d-none")
+        $("#com-add").removeClass("d-none")
+        $("#firOptBtn").addClass("d-none")
+
+    }
+
+    function fillAddress(){
+        $("#address-pop-inner").addClass("d-none");
+        $("#map").addClass("d-none");
+        $("#comAdd").addClass("d-none");
+        $("#my-geo-address").addClass("d-none");
+        $("#newAddress").removeClass("d-none");
+
+    }
+
+    $(document).ready(function() {
+    $('#myForm').on('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
+
+     // Clear previous error messages
+     document.getElementById("addressError").textContent = "";
+
+  // Get the input field values
+  var address = document.getElementById("address").value;
+  let errors = false;
+
+  // Validate each input field
+  if (address === "") {
+    errors = true;
+    document.getElementById("addressError").textContent = "Please enter a complete address.";
+  }
+
+if (!errors) {
+    document.getElementById("myForm").submit();
+    console.log("form submited");
+  }
+
+})
+})
+
+
+
+
+
+
+        function showAddPop(){
+        showDecriptionPop()
+        $(".main-popup-outer").addClass("d-none")
+        $(".main-popup-outer-parent-2").addClass("d-none")
+        $(".address-pop").removeClass("d-none")
+        $(".y-translate").removeClass("d-none")
+        $(".address-pop").show();
+       }
+
+        function showAddDetail(){
+            $("#demo").css("height","100px")
+            $("#demo").css("top","-116px")
+            $(".add-fill").removeClass("d-none")
+            $("#thirOptBtn").removeClass("d-none")
+            $("#secOptBtn").addClass("d-none")
+            $("#address-pop-inner").addClass("d-none")
+        }
+
+
+        function showDecriptionPop(){
+        showPop();
+        $(".main-popup-outer").removeClass("d-none")
+        $(".y-translate").removeClass("d-none")
+
+    }
+
+    function showOnlyBigPop(){
+        showDecriptionPop();
+        $(".main-popup-outer-parent-2").addClass("d-none")
+        $(".address-pop").hide();
+    }
+
+            function showPop(){
+                $(".my-popup").css("top","12%")
+                $(".parent-popUp").css("visibility","visible")
+            }
+
+   
+
+            function hidePop(){
+            $(".my-popup").css("top","100%")
+            $(".parent-popUp").css("visibility","hidden")
+          }
+
+
+        function showGenderPrefPop(){
+            showPop();
+            $("#hideMe").hide()
+           
+
+        }
+            
+
+        $('#openPop').on('click', function() {
+           $('#subscription-page').hide();
+           $("#main").removeClass("d-none")
+           $(".address-pop").addClass("d-none")
+            $(".main-popup-outer").addClass("d-none")
+            $(".main-popup-outer-parent-2").removeClass("d-none")
+            showGenderPrefPop();
+        });
+
+
+
+
+
+        </script>
+        <script>
+
+// Get references to all the buttons
+var buttons = document.querySelectorAll(".select-subscription");
+
+// Add click event listeners to the buttons
+for (var i = 0; i < buttons.length; i++) {
+buttons[i].addEventListener("click", function() {
+changeColor(this);
+});
+}
+
+// Function to change the color of the clicked button
+function changeColor(button) {
+// Reset the color of all buttons
+for (var i = 0; i < buttons.length; i++) {
+buttons[i].style.backgroundColor = "";
+}
+
+// Change the color of the clicked button
+button.style.backgroundColor = "green";
+}
+
+
+const continueButton = document.getElementById('nextPge');
+const genderOptions = document.querySelectorAll('.genderOption');
+const serviceStartDate = document.getElementById('inputField');
+const errorMsg = document.getElementById('errorMsg');
+
+continueButton.addEventListener('click', () => {
+const selectedGender = document.querySelector('.genderOption.selected');
+if (!selectedGender && !serviceStartDate.value) {
+   errorMsg.textContent = 'Please select gender and your start service date.';
+   errorMsg.style.display = 'block';
+  setTimeout(()=>{
+      errorMsg.style.display = 'none';
+
+  },2000)
+  return;
+}
+  
+  
+  if (!selectedGender) {
+    errorMsg.textContent = 'Please select your gender.';
+    errorMsg.style.display = 'block';
+    setTimeout(()=>{
+        errorMsg.style.display = 'none';
+
+    },2000)
+    return;
+  }
+  
+  if (!serviceStartDate.value) {
+
+    errorMsg.textContent = 'Please select start service date.';
+    errorMsg.style.display = 'block';
+    setTimeout(()=>{
+        errorMsg.style.display = 'none';
+
+    },2000)
+    return;
+  }
+
+  if(selectedGender && serviceStartDate.value){
+      console.log("success1");
+      redirectToOtherPage();
+      errorMsg.style.display = 'none';
+    }
+
+  // Execute further functionality or function here
+  console.log('Gender:', selectedGender.textContent);
+  console.log('Service Start Date:', serviceStartDate.value);
+  errorMsg.style.display = 'none';
+});
+
+// Add click event listener to gender options for selection
+genderOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    genderOptions.forEach(opt => opt.classList.remove('selected'));
+    option.classList.add('selected');
+  });
+});
+
+
+
+
+
+
+
+
+
+            $(function() {
+            var mayDate = new Date();
+            var arrayDates = [`${mayDate}`]
+            console.log(mayDate);
+            console.log(arrayDates);
+            
+            var holidays = [
+            '1.1.2020',
+            '2.1.2020',
+            '20.2.2020',
+            '19.1.2020',
+            '1.8.2020',
+            '15.8.2020',
+            '1.11.2020',
+            '8.12.2020',
+            '25.12.2020',
+            '26.12.2020',
+            '29-05-2023',
+            '30-05-2023',
+            '31-05-2023'
+            ];
+            function noSundaysOrHolidays(date) {
+            var string = jQuery.datepicker.formatDate("dd-mm-yy", date);
+                return [arrayDates.indexOf(string) == -1];
+            }
+
+
+
+
+
+
+                $('.datepicker').datepicker({
+                onSelect:function(dateText, inst){
+                console.log("Selected date: " + dateText);
+                $(".calander-parent").css("border-color","green")
+                $("#grayCalender").hide()
+                $("#greenCalender").removeClass("d-none")
+                $("#confiDate").prop("disabled", false);
+                $("#nextPge").prop("disabled", false);
+                inst.inline = true;
+                setTimeout(()=>{
+                    inst.inline = false;
+                },2000)
+            },
+                
+            onClose: function(dateText, inst) { 
+                $(this).attr("disabled", false);
+            
+            },
+            beforeShow: function(date,input, inst) {
+                $(this).attr("disabled", true);
+            },
+            beforeShowDay: noSundaysOrHolidays,
+            minDate: 0,
+            dateFormat: 'dd.mm.yy',
+            
+            });
+        });
+
+                
+
+
+
+        // Get the current date
+        const currentDate = new Date();
+
+        // Array to store the names of the days
+        const dayNames = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+
+        // Loop to display next 5 days' dates and day names
+        for (let i = 1; i <= 5; i++) {
+        // Create a new date for each day by adding the index to the current date
+        const nextDate = new Date(currentDate);
+        nextDate.setDate(currentDate.getDate() + i);
+
+        // Get the day index (0-6) from the next date
+        const dayIndex = nextDate.getDay();
+
+        // Get the day name from the dayNames array
+        const dayName = dayNames[dayIndex];
+
+        // Get the day, month, and year from the next date
+        const day = nextDate.getDate();
+        //   const month = nextDate.getMonth() + 1;
+        //   const year = nextDate.getFullYear();
+
+        // Create a formatted date string
+        const formattedDate = `${day}`;
+
+        // Select the appropriate container and update its content
+        const container = document.getElementById(`dateContainer${i}`);
+        container.innerHTML = `<span>${formattedDate}</span><span>${dayName}</span>`;
+        }
+
+
+
+        function updateInput(element) {
+        const selectedDate = element.innerText;
+        const inputField = document.getElementById('inputField');
+        inputField.value = selectedDate;
+        $("#nextPge").prop("disabled", false);
+        $("#grayCalender").addClass("d-none");
+        $("#greenCalender").removeClass("d-none");
+        $(".calander-parent").css("border-color","green");
+        }
+
+
+
+    function hideCalander(){
+        $("#ui-datepicker-div").hide()
+        $("#hideMe").hide();
+        $("#hideMe2").show();
+    }
+
+    function hideBtn(){
+        $("#hideMe").show();
+        $("#hideMe2").hide();
+    }
+    function confirmBookDate(){
+        $(".five-opt").removeClass("active-green")
+        $(".five-glob").hide();
+        $("#hideMe").hide();
+        $("#hideMe2").show();
+    }
+    function redirectToOtherPage(){
+        window.location.href = "bookingSummery.html";
+    }
+    $("#confiDate").prop("disabled", true);
+    var datePoint = document.querySelectorAll("td");
+
+</script>
+<script>
+    $("#slider-range").slider({
+    range: true,
+    min: 0,
+    max: 1440,
+    step: 15,
+    values: [540, 1020],
+    slide: function (e, ui) {
+        var hours1 = Math.floor(ui.values[0] / 60);
+        var minutes1 = ui.values[0] - (hours1 * 60);
+
+        if (hours1.length == 1) hours1 = '0' + hours1;
+        if (minutes1.length == 1) minutes1 = '0' + minutes1;
+        if (minutes1 == 0) minutes1 = '00';
+        if (hours1 >= 12) {
+            if (hours1 == 12) {
+                hours1 = hours1;
+                minutes1 = minutes1 + " PM";
+            } else {
+                hours1 = hours1 - 12;
+                minutes1 = minutes1 + " PM";
+            }
+        } else {
+            hours1 = hours1;
+            minutes1 = minutes1 + " AM";
+        }
+        if (hours1 == 0) {
+            hours1 = 12;
+            minutes1 = minutes1;
+        }
+
+
+
+        $('.slider-time').html(hours1 + ':' + minutes1);
+
+        var hours2 = Math.floor(ui.values[1] / 60);
+        var minutes2 = ui.values[1] - (hours2 * 60);
+
+        if (hours2.length == 1) hours2 = '0' + hours2;
+        if (minutes2.length == 1) minutes2 = '0' + minutes2;
+        if (minutes2 == 0) minutes2 = '00';
+        if (hours2 >= 12) {
+            if (hours2 == 12) {
+                hours2 = hours2;
+                minutes2 = minutes2 + " PM";
+            } else if (hours2 == 24) {
+                hours2 = 11;
+                minutes2 = "59 PM";
+            } else {
+                hours2 = hours2 - 12;
+                minutes2 = minutes2 + " PM";
+            }
+        } else {
+            hours2 = hours2;
+            minutes2 = minutes2 + " AM";
+        }
+
+        $('.slider-time2').html(hours2 + ':' + minutes2);
+    }
+});
+
+
+
+// for map and address
+    var lat;
+    var lng;
+    var address;
+    var pincode;
+    var city;
+    var floor;
+    var addressLen;
+    var addressarr = [];
+    let addressId = 0;
+    let addressUpdating;
+
+    let loc = "https://goo.gl/maps/e5WryeHc96MC8EP99";
+    $("#loc").attr("href", loc);
+    function initMap() {
+
+
+    
+        console.log("start map")
+        // The location of Uluru
+        let location=JSON.parse(localStorage.getItem('currentLocation'));
+        console.log(location)
+        const broomees = location;
+
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 16,
+            center: broomees,
+            mapTypeControl:false,
+            streetViewControl:false,
+        });
+
+        let w = map.getDiv().offsetWidth;
+        console.log(w);
+        if(w>=992){
+            map.panBy(200, 0);    
+        }
+
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: broomees,
+            map: map,
+            title: 'Broomees',
+            animation: google.maps.Animation.DROP,
+            icon: "assets/images/broomees-marker.png"
+        });
+        marker.addListener('click', function () {
+            window.open(loc, "_blank").focus();
+        });
+        getaddress()
+    }
+
+
+
+
+    function getaddress(){
+        // location detection 
+        localStorage.setItem('currentLocation',JSON.stringify({'lat':28.5730,'lng':77.2386}));
+
+        if (navigator.geolocation) {
+        // Geolocation is supported
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        } else {
+        // Geolocation is not supported
+            console.log('Geolocation is not supported by this browser.');
+        }
+
+        // Success callback function
+        function successCallback(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            localStorage.setItem('currentLocation',JSON.stringify({'lat':parseFloat(latitude.toFixed(4)),'lng':parseFloat(longitude.toFixed(4))}));
+            console.log("update location")
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+                    location: {
+                        lat: JSON.parse(localStorage.getItem('currentLocation')).lat,
+                        lng: JSON.parse(localStorage.getItem('currentLocation')).lng
+                    }
+                })
+                .then((response) => {
+                    let locArray = response.results[0].address_components
+                    console.log(locArray)
+                    localStorage.setItem("locationName", locArray[1].short_name + "," + locArray[2].short_name)
+                    $("#address").val(localStorage.getItem("locationName") + "," + locArray[4].long_name)
+                    $("#city").val(locArray[5].long_name)
+                    $("#pincode").val(locArray[locArray.length-1].long_name)
+                    address=(localStorage.getItem("locationName") + "," + locArray[4].long_name)
+                    city=(locArray[5].long_name)
+                    pincode=(locArray[locArray.length-1].long_name)
+                })
+            }
+
+            // Error callback function
+            function errorCallback(error) {
+            console.log('Error occurred. Error code: ' + error.code);
+            }
+        }
+
+        function getLocation(){
+            addressUpdating=false;
+            showPop()
+            $('#floor').val('');
+            $("#address").val(address);
+            $("#pincode").val(pincode);
+            $("#city").val(city);
+            $('#comAdd').html("Add address");
+            $(".main-popup-outer").addClass("d-none")
+            $(".y-translate").removeClass("d-none")
+            $(".address-pop").removeClass("d-none")
+            $("#map").removeClass("d-none")
+            $("#com-add").removeClass("d-none")
+            $("#com-add").removeClass("d-none")
+            $("#firOptBtn").addClass("d-none")
+            $('#addressContainer').hide();
+        }
+
+
+
+
+    
+
+
+
+
+
+</script>
+    
+</body>
+</html>

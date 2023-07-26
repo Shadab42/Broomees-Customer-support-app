@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer-support</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .booking-card{
+            display: block;
+            background-color: #ffffff !important;
+        }
+    </style>
+  
+</head>
+<body>
+           <div class="peronal-page mb-100" id="peronal-page">
+            <div class="w-90">
+            <div class="booking-top-section d-flex align-center">
+            <figure class="d-flex align-center" onclick="window.history.back()">
+                <img src="./images/arrow-angle-pointing-to-left.png" class="w-16" alt="">
+                <p class="f-size-20 pl-5">My Bookings</p> 
+            </figure>
+            <div class="right-image d-flex " onclick="showMyPop()">
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="all-data " id="all-data">
+       
+
+        <div class="filters mt-10">
+            <button id="allBtn" onclick="filterBookings('all')">All Bookings</button>
+            <button id="activeBtn" onclick="filterBookings('active')">Active Bookings</button>
+            <button id="cancelledBtn" onclick="filterBookings('cancelled')">Cancelled Bookings</button>
+          </div>
+          
+          <div class="booking-cards-parent" id="bookingsContainer">
+              <div class="activity booking-card my-bg-img mt-10" data-status="active">
+                <div class="activity-booking-parent">
+                <div style="position:relative;">
+                    <img src="./images/activity-image.png" class="w-100 h-100" alt="">
+                     <div class="rating-div">
+                         <img src="./images/star.svg" class="w-10" alt="">
+                         <p class="f-size-10">4.2</p>
+                     </div>
+                    <div class="booking-statuss bg-success d-flex">
+                        <p class="f-size-10 f-weight-300 ">Active</p>
+                        <img src="./images/my-lov.svg"  alt="">
+                    </div>
+            </div>
+
+        <div class="rigth-side-contents mt-5">
+            <p  class="f-size-13 f-weight-300">North Indian Cuisine Cook</p>
+            <div class="details-parent">
+            <div class="details mt-5">
+                <p class="f-size-9">Name</p>
+                <p class="f-size-12 f-weight-500">Shefali Kumari</p>
+                <p class="f-size-9 mt-5">Unique Worker Code</p>
+                <p class="f-size-12 f-weight-500">UXV-RTY-230</p>
+            </div>
+            <button class="parentbtn" onclick="showFullDetail()">Details</button>
+        </div>
+    </div>
+</div>
+
+</div>
+              <div class="activity booking-card mt-20" data-status="active" >
+              <div class="activity-booking-parent">
+               <div style="position:relative;">
+                    <img src="./images/activity-image.png" class="w-100 h-100" alt="">
+                     <div class="rating-div">
+                         <img src="./images/star.svg" class="w-10" alt="">
+                         <p class="f-size-10">4.2</p>
+                     </div>
+                     
+                <div class="booking-statuss d-flex align-center bg-primary" >
+                <p class="f-size-10 f-weight-300">Assigned</p>
+                <img src="./images/my-lov.svg"  alt="">
+            </div>
+        </div>
+            <div class="rigth-side-contents mt-5">
+            <p class="f-size-13 f-weight-300">North Indian Cuisine Cook</p>
+            <div class="details-parent">
+
+
+            <div class="details mt-5">
+                <p class="f-size-9">Name</p>
+                <p class="f-size-12 f-weight-500">Shefali Kumari</p>
+                <p class="f-size-9 mt-5">Unique Worker Code</p>
+                <p class="f-size-12 f-weight-500">UXV-RTY-230</p>
+            </div>
+            <button class="parentbtn" onclick="showFullDetail()">Details</button>
+        </div>
+    </div>
+</div>
+</div>
+          
+              <div class="activity booking-card mt-20" data-status="active">
+              <div class="activity-booking-parent">
+               <div style="position:relative;">
+                    <img src="./images/activity-image.png" class="w-100 h-100" alt="">
+                     <div class="rating-div">
+                         <img src="./images/star.svg" class="w-10" alt="">
+                         <p class="f-size-10">4.2</p>
+                     </div>
+                     <div class="d-flex align-center booking-statuss bg-warning mt-10 mb-5" >
+        <p class="f-size-10 f-weight-300">Processing</p>
+        <div class="cross-img-parent wi-he d-flex align-center" >
+            <img src="./images/ghari-kanta.svg" alt="">
+        </div>
+    </div>
+            </div>
+
+              
+        <div class="rigth-side-contents mt-5">
+            <p class="f-size-13 f-weight-300">North Indian Cuisine Cook</p>
+            <div class="details-parent">
+
+
+            <div class="details mt-5">
+                <p class="f-size-9">Name</p>
+                <p class="f-size-12 f-weight-500">Shefali Kumari</p>
+                <p class="f-size-9 mt-5">Unique Worker Code</p>
+                <p class="f-size-12 f-weight-500">UXV-RTY-230</p>
+            </div>
+            <button class="parentbtn" onclick="showFullDetail()">Details</button>
+        </div>
+    </div>
+
+
+  
+       
+    </div>
+
+</div>
+              <div class="activity booking-card mt-20" data-status="cancelled">
+   
+               <div class="activity-booking-parent">
+               <div style="position:relative;">
+                    <img src="./images/activity-image.png" class="w-100 h-100" alt="">
+                     <div class="rating-div">
+                         <img src="./images/star.svg" class="w-10" alt="">
+                         <p class="f-size-10">4.2</p>
+                     </div>
+                     <div class="d-flex align-center booking-statuss bg-danger mt-10 mb-5" >
+                <p class="f-size-10 f-weight-300">Cancelled</p>
+                <div class="cross-img-parent wi-hee d-flex  justify-center" >
+                    <img src="./images/cross-icon.svg" style="width: 10px;" alt="">
+                </div>
+            
+            </div>
+            </div>
+              
+        <div class="rigth-side-contents mt-5">
+            <p class="f-size-13 f-weight-300">North Indian Cuisine Cook</p>
+            <div class="details-parent">
+
+
+            <div class="details mt-5">
+                <p class="f-size-9">Name</p>
+                <p class="f-size-12 f-weight-500">Shefali Kumari</p>
+                <p class="f-size-9 mt-5">Unique Worker Code</p>
+                <p class="f-size-12 f-weight-500">UXV-RTY-230</p>
+            </div>
+            <button class="parentbtn" onclick="showFullDetail()">Details</button>
+        </div>
+    </div>
+
+
+   
+       
+    </div>
+
+</div>
+</div>
+
+       
+
+        
+        
+    </div>
+</div>
+<div class="parent-popUp" onclick="hidePop()"></div>
+</div>
+<div class="my-popup" id="main">
+    <div class="y-translate-fPopup  ">
+
+        <div class="y-translate-upper d-none">
+            <h4>What do these badges mean?</h4>
+            <div class="d-flex align-center justify-center my-booking-status bg-success mt-10 mb-5">
+                <p class="f-size-11 f-weight-400">Active</p>
+                <img src="./images/my-lov.svg" alt="">
+            </div>
+            <p class="f-size-10 f-weight-400 pl-10 mb-5">Your service has been started, now sit back & relax!</p>
+            <div class="line"></div>
+            
+            <div class="d-flex align-center justify-center my-booking-status bg-primary mt-10 mb-5" >
+                <p class="f-size-11 f-weight-400">Assigned</p>
+                <img src="./images/my-lov.svg" alt="">
+            </div>
+            <p class="f-size-10 f-weight-400 pl-10 mb-5">Worker has been assigned to your booking ID by the team, you’ll receive more information within 24 hours.</p>
+            <div class="line"></div>
+            
+            <div class="d-flex align-center justify-center my-booking-status bg-warning mt-10 mb-5" >
+                <p class="f-size-11 f-weight-400">Processing</p>
+                <div class="cross-img-parent d-flex align-center justify-center">
+                    <img src="./images/ghari-kanta.svg" alt="">
+                </div>
+            </div>
+            <p class="f-size-10 f-weight-400 pl-10 mb-5">We have received your booking request, we will now assign a Relationship Manager. Hang Tight we’ll be in touch shortly</p>
+            <div class="line"></div>
+            <div class="d-flex align-center justify-center my-booking-status bg-danger mt-10 mb-5">
+                <p class="f-size-11 f-weight-400">Cancelled</p>
+                <div class="cross-img-parent d-flex align-center justify-center">
+                    <img src="./images/cross-icon.svg" alt="">
+                </div>
+               
+            </div>
+            <p class="f-size-10 f-weight-400 pl-10 mb-5">Your booking has been canceled, either by your end or ours. If you think this was a mistake please contact us through the customer support page.</p>
+            <div class="line"></div>
+    
+            <div class="d-flex align-center justify-center my-booking-status mt-10 mb-5" style="background-color: #3C327A;">
+                <p class="f-size-11 f-weight-400">Cancelled</p>
+                <div class="cross-img-parent d-flex align-center justify-center">
+                    <img src="./images/pause2.svg" alt="">
+                </div>
+               
+            </div>
+            <p class="f-size-10 f-weight-400 pl-10 mb-5">Your booking has been paused either from your end or ours, If you think this was a mistake please contact us through the customer support page.</p>
+    
+            <div class="done-btn d-flex "> 
+                <button onclick="hidePop()">Done</button>
+            </div>
+            <!-- end -->
+    
+        </div>
+    </div>
+    <div class="ytranslatedPopup">
+        <div class="d-flex align-center ">
+            <div class="detail-img-parent">
+                <img src="./images/myBlacBag.png"  style="width: 30px;" alt="">
+            </div>
+            <div class="ml-15">
+                <p class="f-size-20 f-weight-600">Order Details</p>
+                <p class="f-size-15 f-weight-300">#3485-23849-23898-00</p>
+            </div>
+        </div>
+        <div class="line mt-10"></div>
+        <div class="mt-20">
+            <ul class="circle-list" id="data-list">
+                <div>
+                    <li class="f-size-10 300">
+                        <span class=" f-weight-600 mr-5">Cleaning:</span>
+                         Brooming/Mopping(For 10 hours per day)
+                    </li>
+                </div>
+
+                <div>
+                    <li class="f-size-10 300">
+                        <span class=" f-weight-600 mr-5">Dishwashing: </span>
+                         Without a dishwasher(For 10 hours per day)
+                    </li>
+
+                </div>
+                <li class="f-size-10 300"><span class=" f-weight-600 mr-5">Cooking work: </span> 1 meal only(For 10 hours per day)</li>
+                <li class="f-size-10 300"><span class=" f-weight-600 mr-5">Food type: </span> Veg(For 10 hours per day)</li>
+                <li class="f-size-10 300"><span class=" f-weight-600 mr-5">Laundry/Ironing: </span> Include both(For 10 hours per day)</li>
+                <li class="f-size-10 300"><span class=" f-weight-600 mr-5">House size details: </span> 3 BHK(Other details)</li>
+                <li class="f-size-10 300"><span class=" f-weight-600 mr-5">No. of family members: </span> 3-4 people(Other details)</li>
+
+            </ul>
+        </div>
+
+        <div class="myOrderDetaiBtn mt-20">
+            <button class="d-flex align-center justify-center btn-gray w-100" onclick="copyData()"><img src="./images/copyimg.png" class="mr-10" style="width: 12px;" alt=""> Copy Details</button>
+            <button class="btn-black w-100" onclick="hidePop()">Done</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="detail-popup-all-data d-none" id="detail-popup-all-data">
+
+    <div class="peronal-page my-personal-page-f-sec mb-10" style="background-color: #f5f5f5;">
+    <div class="w-90">
+    <div class="booking-allDetails">
+    <div class="booking-allDetails-upper">
+
+
+
+   
+    <div class="activity mt-20">
+            <div class="my-activity-booking-parent sp-booking-parent" id="activity-booking-parent">
+                   <div style="position:relative;">
+                    <img src="./images/activity-image.png" class="w-100 h-100" alt="">
+                     <div class="rating-div">
+                         <img src="./images/star.svg" class="w-10" alt="">
+                         <p class="f-size-10">4.2</p>
+                     </div>
+                     <div class="booking-statuss bg-success d-flex">
+                    <!-- <div class="text-center" > -->
+                        <p class="f-size-10 f-weight-300">Active</p>
+                    <!-- </div> -->
+                    <img src="./images/my-lov.svg"  alt="">
+                </div>
+            </div>
+
+            <div class="rigth-side-contents mt-5">
+                <p class="f-size-13 f-weight-600">North Indian Cuisine Cook</p>
+                <div class="details-parent">
+                <div class="details mt-4">
+                    <p class="f-size-10 f-weight-600">Worker Details</p>
+                    <p class="f-size-12 f-weight-300">Shefali Kumari</p>
+                    <p class="f-size-12 f-weight-300 mt-4">Female | 47 years old</p>
+                    <p class="f-size-12 f-weight-300">10+ Years of experience </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                
+    <div class="myworker-code-btn  mt-20">
+        <button class="btn-black">Contact Options</button>
+        <div class="my-worker-code">
+            <p class="f-size-9 f-weight-300 text-center">Unique Worker Code</p>
+            <p class="f-size-13 f-weight-600 text-center">UXV-RTY-230</p>
+        </div>
+
+    </div>
+    <div class="workerdocumentation mt-20 mb-20">
+        <p class="f-size-13 f-weight-600 mb-10">Worker Documentation</p>
+        <figure class="workerdocumentation-img">
+            <div>
+                <img src="./images/aadhar-1.png" alt="">
+                <p>Aadhar Card</p>
+            </div>
+            <div>
+                <img src="./images/aadhar-2.png" alt="">
+                <p>Police Clearance</p>
+            </div>
+            <div>
+                <img src="./images/aadhar-3.png" alt="">
+                <p>Vaccination</p>
+
+            </div>
+            
+        </figure>
+
+    </div>
+    
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="peronal-page  mb-100">
+    <div class="w-90">
+        <!-- <p class="f-weight-500 mt-20 mb-10">Order Details</p> -->
+        <button class="f-size-16 f-weight-500 order-detail-btn mt-10 ml-15" onclick="showOrderDetailsPop()">Order Details <img src="./images/right-arrow-black.png" class="w-8 ml-5" alt=""></button>
+        <div class="order-details-section mt-10">
+            <div>
+                <div class="chang-img-bg">
+                    <img src="./images/brush-img.png" alt="">
+                </div>
+                <p class="f-size-10 f-weight-400">Cleaning</p>
+            </div>
+
+            <div>
+                <div class="chang-img-bg">
+                    <img src="./images/ulti-shirt.png" alt="">
+                </div>
+              <p class="f-size-10 f-weight-400">Cooking</p>
+            </div>
+            
+            <div>
+                <div class="chang-img-bg">
+                    <img src="./images/laundry-wala.png" alt="">
+                </div>
+                <p class="f-size-10 f-weight-400">Laundry</p>
+            </div>
+           
+            <div>
+                <div class="chang-img-bg">
+                    <img src="./images/diswashing.png" alt="">
+                </div>
+
+                <p class="f-size-10 f-weight-400">Dishwashing</p>
+            </div>
+
+        </div>
+
+        <div class="relation-manager mt-20">
+            <div>
+                <p class="f-size-13 f-weight-600">Relationship Manager Details</p>
+                <h5>Apoorv Gaur | 5 years of experience</h5>
+                <h5>Availability 10am to 7pm </h5>
+            </div>
+            <div class="d-flex my-whatsapp-img">
+                <img src="./images/local-whatsapp.png" alt="">
+                <img src="./images/orignal-whatsapp.png" alt="">
+
+            </div>
+        </div>
+        <div class="payment-details mt-20">
+            <p class="f-size-13 f-weight-600">Payment Details</p>
+            <div class="d-flex first-dF mt-10 ">
+                <div class="visa-logo-parent mt-5">
+                    <img src="./images/visa-logo.svg" alt="">
+                </div>
+                <div class="d-flex align-center space-between w-100">
+
+                    <div class="ml-10">
+                        <p class="f-size-13 f-weight-400">Card number XXXX-XXXX-X209</p>
+                        <p class="f-size-11 f-weight-300">Saved with RBI Guidelines</p>
+                    </div>
+
+                    <img src="./images/checked-icon.png"  alt="">
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="subscription-details mt-20">
+            <p class="f-size-13 f-weight-600 mb-10">Subscription Details</p>
+            <div class="d-flex">
+               
+                        <img src="./images/pdf-img.png" style="width: 25%;" alt="">
+
+                <div class="w-100 ml-10 mt-20">
+                    <div class="d-flex space-between">
+                        <p class="f-size-13 f-weight-300">6 Months Premium</p>
+                        <p class="f-size-13 f-weight-300">₹16800</p>
+                    </div>
+                    <div class="d-flex space-between">
+                        <p class="f-size-13 f-weight-300">Special Discount</p>
+                        <p class="f-size-13 f-weight-300">₹800</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="d-flex space-between">
+                        <p class="f-size-13 f-weight-600 mt-5">Total Amount</p>
+                        <p class="f-size-13 f-weight-600">₹16000</p>
+                    </div>
+                </div>
+                
+                <div class="invoice-pdf">
+                    <p>Invoice</p>
+                    <p>PDF</p>
+                </div>
+            </div>
+        </div>
+        <div class="my-go-btn mt-20">
+            <button class="d-flex btn-black g-back" onclick="showMainData()"><img src="./images/my-new-arrow.png" style="width: 8px; margin-top:3px" class="mr-10 " alt=""> Go back</button>
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+
+
+
+<script src="./js/main.js"></script>
+<script src="./js/jquery.js"></script>
+    <script src="./js/bottomNav.js"></script>
+
+    <script>
+
+        function filterBookings(filter) {
+            console.log(filter);
+        // Remove active-filter class from all buttons
+        document.getElementById('allBtn').classList.remove('active-filter');
+        document.getElementById('activeBtn').classList.remove('active-filter');
+        document.getElementById('cancelledBtn').classList.remove('active-filter');
+        
+        // Add active-filter class to the clicked button
+        document.getElementById(filter + 'Btn').classList.add('active-filter');
+        // console.log(filter);
+        }
+        
+        // // Show/hide booking cards based on the selected filter
+        // var bookings = document.querySelectorAll('.booking-card');
+        // for (var i = 0; i < bookings.length; i++) {
+        //     var booking = bookings[i];
+        //     if (filter === 'all') {
+        //         console.log(filter);
+        //     booking.style.display = 'block';
+        //     } else if (filter === 'active') {
+        //         console.log(filter);
+        //     if (booking.dataset.status === 'active') {
+        //         booking.style.display = 'block';
+        //     } else {
+        //         booking.style.display = 'none';
+        //     }
+        //     } else if (filter === 'cancelled') {
+        //         console.log(filter);
+        //     if (booking.dataset.status === 'cancelled') {
+        //         booking.style.display = 'block';
+        //     } else {
+        //         booking.style.display = 'none';
+        //     }
+        //     }
+        // }
+        // }
+
+
+
+        $("#update").prop("disabled", true);
+        function showPop(){
+            $(".my-popup").css("top","15%")
+            $(".parent-popUp").css("visibility","visible")
+        }
+
+        function hidePop(){
+            $(".my-popup").css("top","100%")
+            $(".parent-popUp").css("visibility","hidden")
+        }
+            function showAttendacePop(){
+                showPop()
+                $(".y-translate").removeClass("d-none")
+                $(".y-translate-upper").addClass("d-none")
+                $(".y-translate-submited").addClass("d-none")
+            }
+
+
+            
+
+        function changeBg1(){
+            $("#bg-1").css("background-color","rgb(0 171 58 / 17%)")
+            $("#update").css("background-color","#000000")
+            $("#update").prop("disabled", false);
+
+
+
+        }
+        function changeBg2(){
+            $("#bg-2").css("background-color","rgb(240 139 139 / 15%)")
+            $("#update").css("background-color","#000000")
+            $("#update").prop("disabled", false);
+
+
+        }
+        function changeBg3(){
+            $("#bg-3").css("background-color"," rgb(160 210 217 / 20%)")
+            $("#update").css("background-color","#000000")
+            $("#update").prop("disabled", false);
+
+
+
+        }
+        function changeBg4(){
+            $("#bg-4").css("background-color","rgb(225 227 93 / 23%)")
+            $("#update").css("background-color","#000000")
+            $("#update").prop("disabled", false);
+
+            
+        }
+
+        function showMyPop(){
+            showPop()
+            $(".y-translate").addClass("d-none")
+            $(".y-translate-upper").removeClass("d-none")
+            $(".y-translate-submited").addClass("d-none")
+            $(".ytranslatedPopup").addClass("d-none")
+        }
+        function showOrderDetailsPop(){
+            showPop()
+            $(".y-translate").removeClass("d-none")
+            $(".y-translate-upper").addClass("d-none")
+            $(".y-translate-submited").removeClass("d-none")
+            $(".ytranslatedPopup").removeClass("d-none")
+
+        }
+
+       
+
+
+        function showAttendancePop(){
+            $(".y-translate").addClass("d-none")
+            $(".y-translate-submited").removeClass("d-none")
+            setTimeout(()=>{
+                hidePop()
+            },2000)
+        }
+
+        function showFullDetail(){
+            $("#peronal-page").removeClass("mb-100")
+            $("#peronal-page").addClass("mb-10")
+            $("#all-data").addClass("d-none");
+            $("#detail-popup-all-data").removeClass("d-none")
+        }
+
+        function showMainData(){
+            $("#peronal-page").addClass("mb-100")
+            $("#peronal-page").removeClass("mb-10")
+            $("#all-data").removeClass("d-none");
+            $("#detail-popup-all-data").addClass("d-none")
+
+        }
+
+
+ function copyData() {
+ // Get the <ul> element
+    // function copyData() {
+      // Get the <ul> element
+      var dataList = document.getElementById("data-list");
+
+      // Create a variable to store the concatenated content
+      var copiedData = "";
+
+      // Iterate through the <li> elements
+      var listItems = dataList.getElementsByTagName("li");
+      for (var i = 0; i < listItems.length; i++) {
+        var listItem = listItems[i];
+
+        // Get the text content of the <li> element
+        var liContent = listItem.textContent;
+
+        // Concatenate the <li> content
+        copiedData += liContent.trim();
+
+        // Check if the <li> element contains a <span> element
+        if (listItem.getElementsByTagName("span").length > 0) {
+          // Get the <span> element
+          var spanElements = listItem.getElementsByTagName("span");
+
+          // Iterate through the <span> elements
+          for (var j = 0; j < spanElements.length; j++) {
+            var spanElement = spanElements[j];
+
+            // Get the text content of the <span> element
+            var spanContent = spanElement.textContent;
+
+            // Concatenate the <span> content
+            copiedData += " " + spanContent.trim();
+          }
+        }
+
+        // Add a line break
+        copiedData += "\n";
+      }
+
+      // Create a temporary textarea element
+      var tempTextarea = document.createElement("textarea");
+
+      // Set the value of the textarea to the concatenated content
+      tempTextarea.value = copiedData;
+
+      // Append the textarea element to the body
+      document.body.appendChild(tempTextarea);
+
+      // Select the content of the textarea
+      tempTextarea.select();
+
+      // Copy the selected content to the clipboard
+      document.execCommand("copy");
+
+      // Remove the temporary textarea element
+      document.body.removeChild(tempTextarea);
+
+      // Alert the user that the data has been copied
+      alert("Data has been copied to the clipboard!");
+    }
+    </script>
+</body>
+</html>

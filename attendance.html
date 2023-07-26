@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer-support</title>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .attendance-card {
+            display: grid;
+        }
+    </style>
+</head>
+<body>
+    <div class="peronal-page mb-100">
+    <div class="w-90">
+         <div class="booking-top-section d-flex align-center">
+            <figure class="d-flex align-center">
+                <img onclick="window.history.back()" src="./images/arrow-angle-pointing-to-left.png" style="width: 16px;" alt="">
+                <p class="f-size-20 pl-5">Attendance</p> 
+            </figure>
+            <div class="right-image d-flex" onclick="showMyPop()">
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="mt-10">
+            <p class="f-size-13 f-weight-300 ml-15 mb-10">Select a service to continue</p>
+        </div>
+
+        <div class="attendance-card ">
+        <div style="position:relative;" >
+                    <img src="./images/activity-image.png" class="w-100 h-100" alt="">
+                     <div class="rating-div">
+                         <img src="./images/star.svg" class="w-10" alt="">
+                         <p class="f-size-10">4.2</p>
+                     </div>
+                     <p class="image-parent">Present Today</p>
+                    
+            </div>
+           
+
+    <div class="rigth-side-contents mt-5">
+       
+    <div class="attendance-outer d-flex">
+        <div>
+            <p class="f-size-9 f-weight-300">Name</p>
+            <p class="f-size-12 f-weight-500">Shefali Kumari</p>
+        </div>
+        <div class="ml-15">
+            <p class="f-size-9 f-weight-300">Shift hours</p>
+            <p class="f-size-12 f-weight-500">10am - 4pm</p>
+        </div>
+    </div>
+    <div class=" attendance-mange-btn ">
+        <button class="btn-black">Manage Attendance</button>
+        
+        <button class="btn-success" onclick="showAttendacePop()">Mark Today</button>
+        
+        
+    </div>
+</div>
+
+</div>
+<div class="my-popup" id="main">
+    <div class="y-translate-upper d-none">
+        <h4>What do these badges mean?</h4>
+        <div class="d-flex align-center space-between my-booking-status bg-success mt-10 mb-5">
+            <p class="f-size-11 f-weight-400 mr-5">Active</p>
+            <img src="./images/my-lov.svg" alt="">
+        </div>
+        <p class="f-size-10 f-weight-400 pl-10 mb-5">Your service has been started, now sit back & relax!</p>
+        <div class="line"></div>
+        
+        <div class="d-flex align-center justify-center my-booking-status bg-primary mt-10 mb-5" >
+            <p class="f-size-11 f-weight-400 mr-5">Assigned</p>
+            <img src="./images/my-lov.svg" alt="">
+        </div>
+        <p class="f-size-10 f-weight-400 pl-10 mb-5">Worker has been assigned to your booking ID by the team, you’ll receive more information within 24 hours.</p>
+        <div class="line"></div>
+        
+        <div class="d-flex align-center justify-center my-booking-status bg-warning mt-10 mb-5" >
+            <p class="f-size-11 f-weight-400 mr-5">Processing</p>
+            <div class="cross-img-parent d-flex align-center justify-center">
+                <img src="./images/ghari-kanta.svg" alt="">
+            </div>
+        </div>
+        <p class="f-size-10 f-weight-400 pl-10 mb-5">We have received your booking request, we will now assign a Relationship Manager. Hang Tight we’ll be in touch shortly</p>
+        <div class="line"></div>
+        <div class="d-flex align-center justify-center my-booking-status bg-danger mt-10 mb-5">
+            <p class="f-size-11 f-weight-400 mr-5">Cancelled</p>
+            <div class="cross-img-parent d-flex align-center justify-center">
+                <img src="./images/cross-icon.svg" alt="">
+            </div>
+           
+        </div>
+        <p class="f-size-10 f-weight-400 pl-10 mb-5">Your booking has been canceled, either by your end or ours. If you think this was a mistake please contact us through the customer support page.</p>
+        <div class="line"></div>
+
+        <div class="d-flex align-center justify-center my-booking-status mt-10 mb-5" style="background-color: #3C327A;">
+            <p class="f-size-11 f-weight-400 mr-5">Cancelled</p>
+            <div class="cross-img-parent d-flex align-center justify-center">
+                <img src="./images/pause2.svg" alt="">
+            </div>
+           
+        </div>
+        <p class="f-size-10 f-weight-400 pl-10 mb-5">Your booking has been paused either from your end or ours, If you think this was a mistake please contact us through the customer support page.</p>
+
+        <div class="done-btn d-flex "> 
+            <button onclick="hidePop()">Done</button>
+        </div>
+        <!-- end -->
+
+    </div>
+
+
+    <div class="y-translate d-none">
+    <div class="attendance-card attendance-card-popup ">
+    <div style="position:relative;" >
+                    <img src="./images/activity-image.png" class="w-100 h-100" alt="">
+                     <div class="rating-div">
+                         <img src="./images/star.svg" class="w-10" alt="">
+                         <p class="f-size-10">4.2</p>
+                     </div>
+                  
+                    
+            </div>
+
+        <div class="rigth-side-contents mt-5">
+            <p class="f-weight-600">Is Shefali Kumari present today?</p>
+            <p class="f-size-10">Please mark her attendance by selecting an option below.</p>
+        </div>
+
+</div>
+<div class="attendance-option mt-20">
+    <div class="border-success" id="bg-1">
+        <p onclick="changeBg1()">Worker is present</p>
+    </div>
+    <div class="border-pink" id="bg-2">
+        <p onclick="changeBg2()">Worker is Absent</p>
+    </div>
+    <div class="border-menu" id="bg-3">
+       <p onclick="changeBg3()">Worker took a half day</p>
+    </div>
+    <div class="border-orange" id="bg-4">
+        <p onclick="changeBg4()">Worker was granted a paid leave</p>
+    </div>
+    
+</div>
+
+<div class="notes-parent mt-20">
+    <textarea name="" id="" cols="20" rows="5" placeholder="Add optional notes"></textarea>
+    <img src="./images/third-pen.png" alt="">
+</div>
+<div class="confirm-update mt-10">
+    <button id="update" onclick="showAttendancePop()">Confirm & update</button>
+</div>
+</div>
+
+
+
+
+
+
+<div class="y-translate-submited d-none">
+    <div class="d-flex align-center justify-center success-img mt-20" >
+        <img src="./images/Success.gif" alt="">
+    </div>
+    <p>Attendance report</p>
+    <p>has been submitted!</p>
+    <div class="f-size-11 f-weight-300 text-center mt-10">We'll update the same as soon as posible</div>
+    <button onclick="hidePop()">Close</button>
+</div>
+</div>
+<div class="parent-popUp" onclick="hidePop()"></div>
+        </div>
+        </div>
+
+       
+        <!-- <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script> -->
+    
+</body>
+<script src="./js/jquery.js"></script>
+    <script src="./js/main.js"></script>
+    <script async defer src="js/bottomNav.js"></script>
+    <script>
+
+        $("#update").prop("disabled", true);
+        function showPop(){
+            $(".my-popup").css("top","12%")
+            $(".parent-popUp").css("visibility","visible")
+        }
+
+        function hidePop(){
+            $(".my-popup").css("top","100%")
+            $(".parent-popUp").css("visibility","hidden")
+        }
+            function showAttendacePop(){
+                showPop()
+                $(".y-translate").removeClass("d-none")
+                $(".y-translate-upper").addClass("d-none")
+                $(".y-translate-submited").addClass("d-none")
+            }
+
+
+            
+
+        function changeBg1(){
+            $("#bg-1").css("background-color","rgb(0 171 58 / 17%)")
+            $("#update").css("background-color","#000000")
+            $("#update").prop("disabled", false);
+
+
+
+        }
+        function changeBg2(){
+            $("#bg-2").css("background-color","rgb(240 139 139 / 15%)")
+            $("#update").css("background-color","#000000")
+            $("#update").prop("disabled", false);
+
+
+        }
+        function changeBg3(){
+            $("#bg-3").css("background-color"," rgb(160 210 217 / 20%)")
+            $("#update").css("background-color","#000000")
+            $("#update").prop("disabled", false);
+
+
+
+        }
+        function changeBg4(){
+            $("#bg-4").css("background-color","rgb(225 227 93 / 23%)")
+            $("#update").css("background-color","#000000")
+            $("#update").prop("disabled", false);
+
+            
+        }
+
+        function showMyPop(){
+            showPop()
+            $(".y-translate").addClass("d-none")
+            $(".y-translate-upper").removeClass("d-none")
+            $(".y-translate-submited").addClass("d-none")
+        }
+
+       
+
+
+        function showAttendancePop(){
+            $(".y-translate").addClass("d-none")
+            $(".y-translate-submited").removeClass("d-none")
+            setTimeout(()=>{
+                hidePop()
+            },2000)
+        }
+
+        $.ajax({
+            type: 'GET',
+            url: URL+"bookings",
+            data: { id:localStorage.getItem("id") },
+            dataType: 'json',
+            beforeSend: function(request) {request.setRequestHeader("X-API-KEY", API_KEY);},
+            success: function (data, status, xhr, response) {
+                console.log('status: ' + status + ', data: ' + ":" + data + ":");
+                if (status == "success") {
+                    if (data.status) {
+                        let show = "";
+                        data.data.forEach(item => {
+                            
+                             if(item.workerId!=0 && item.adminBookingStatus==2 && item.userBookingStatus==3){
+                                console.log(item)
+                                let rmbtn=item.notification[item.notification.length-1];
+                             
+
+                            show += ` 
+                            <div class="m-attendence-cards">
+                            <div class="mt-30 ">
+                                <div class="worker-img-container">
+                                    <figure>
+                                        <img src="${imageUrl + "workers/" + item.workerImage}" alt="maid" class="maid-img">
+                                    </figure>
+                                     <div class="card-content">
+                                    <h5>${item.workerName}</h5>
+                                    <span>${item.serviceName}</span>
+                                    <span>${JSON.parse(item.preference).gender}, Exp. ${JSON.parse(item.preference).experience + " yrs"}</span>
+                                      
+                                </div>
+                                </div>
+                               
+                            </div>
+                            <div style="gap: 10px;display: flex;align-items: center;justify-content: end;">
+                            ${rmbtn?` <button class="btn manageatt-btn btn-outline"><p><a style="color:#FEB85E" href="tel:${rmbtn.rmContact}">Call Rm</a></p></button>  `:''}
+                            <button class="btn manageatt-btn btn-outline"><p><a style="color:#FEB85E" href="tel:${item.workerPhone}">Call Worker</a></p></button>
+                            <button class="btn active manageatt-btn"> <p data-booking='${JSON.stringify(item).replace(/'/gi,'')}' onclick="manageAttandance(this)">Manage Attendance</p></button>
+                            </div>
+                           </div> `;
+                     }
+                        });
+                        // $('#bookings').html(show);
+                        if(show.trim()==""){
+                            $("#bookings").html(`<div class="align-things mt-100">
+                                <img src="img/empty.svg" alt="congratulations-img" style="width:50%">
+                                <p class="account-createdtxt">No bookings yet!!!</p>
+                            </div>`);
+                        }
+                    }
+                } else {
+                    alert("Data Fetching Failed");
+                }
+            },
+            error: function (jqXhr, textStatus, errorMessage) {
+                console.log('Error' + errorMessage);
+            }
+        });
+
+
+   
+    </script>
+</html>

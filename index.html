@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer-support</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+      .form-error-input{
+        border: 1px solid red !important;
+      }
+      .form-error-msg {
+        color: red;
+        margin: 5px 0 0 5px;
+        display: block;
+    }
+
+   /* bekar hai yar main to toot gya */
+   /* added one more  */
+
+    </style>
+   
+</head>
+<body>
+
+   
+
+
+    <div class="container-login d-none" id="design-show">
+        <div class="design-sec-1 d-flex">
+            <p class="design-1"></p>
+            <p class="design-2"></p>
+            <p class="design-10"></p>
+        </div>
+
+        <div class="design-sec-2 d-flex mt-20">
+            <p class="design-6"></p>
+            <p class="design-8"></p>
+            <p class="design-2"></p>
+            <p class="design-7"></p>
+            
+        </div>
+        <div class="design-sec-1 d-flex mt-20">
+            <p class="design-1"></p>
+            <p class="design-2"></p>
+            <p class="design-10"></p>
+        </div>
+
+        <div class="design-sec-2 d-flex mt-20">
+            <p class="design-6"></p>
+            <p class="design-8"></p>
+            <p class="design-2"></p>
+            <p class="design-7"></p>
+            
+        </div>
+        <div class="design-sec-3 d-flex  mt-20">
+            <p class="design-1"></p>
+            <p class="design-2"></p>
+            <p class="design-10"></p>
+        </div>
+</div>
+<div class="peronal-page mb-100">
+  <div class="w-90">
+<div class="container-login-2">
+    <figure class="broom">
+     <img src="./images/Group 284.svg" alt="">
+    </figure>
+    <p id="india" class="india d-none">India's trusted Home Makers</p>
+   
+ </div>
+ <div class="detail ml-10 mb-10">
+    <p id="fill" class="f-size-12 f-weight-400 d-none">Fill in your details to register</p>
+ </div>
+
+ <form id="myForm">
+<div class="container-login-3 ">
+    <div class="inner">
+        <p id="mobile" class="f-size-10 f-weight-300 pb-5 ml-10">Mobile Number</p>
+        <div class="firstinput">
+         <input type="number" name="phone" id="myFInput" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="Enter mobile number">
+         <!-- <img src="./images/Phone Rounded.svg" id="phone" alt=""> -->
+         <img src="./images/Vector.svg"  class="d-none" id="check" alt="">
+        </div>
+        <span id="mobile-error" class="error form-error-msg f-size-10 f-weight-300"></span>
+      </div>
+
+    <div class="inner mt-20" id="one-time">
+        <p class="pb-5 ml-10 f-size-11" >One Time Password</p>
+        <button id="continue-btn" type="button" class="btn-primary" onclick="sentOtp()">continue</button>
+          <div class="inner-2 d-none " id="inner-2">
+            <input type="number" id="password" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="XX XX XX">
+            <!-- <button type="button" id="login"  class="btn-primary ">Login</button> -->
+            <button id="reSendOtpText" class="otp-content f-size-11 " onclick="sentOtp()" style="border: none;" disabled>Re-send OTP</button>
+        </div>
+        <span id="otp-error" class="error form-error-msg f-size-10 f-weight-300"></span>
+        <button type="button" id="login"  class="btn-primary mt-20">Login</button>
+       
+    </div>
+
+    <div class=" mt-12 d-none" id="inner-3">
+        <p class="ml-10 mb-5 f-size-10 f-weight-300">Full Name</p>
+        <div class="firstinput">
+            <input type="text" id="name"  placeholder="Enter Your Name">
+            <span id="fullname-error" class="error form-error-msg f-size-10 f-weight-300"></span>
+            <img src="./images/Vector.svg"  class="d-none" id="check-2" alt="">
+        </div>
+    </div>
+
+    <div class="inner-4 d-none mt-12" id="inner-4">
+        <p class="ml-10 mb-5 f-size-10 f-weight-300">Email ID (optional)</p>
+        <div class="input-2 myDone">
+            <div class="firstinput">
+                <input type="email" id="myTInput" placeholder="Enter Your Email address">
+
+                <img src="./images/Vector.svg"  class="d-none" id="check-3" alt="">
+            </div>
+            <!-- <button type="button" id="done" class="done">Done</button> -->
+        </div>
+        <span id="email-error" class="error form-error-msg f-size-10 f-weight-300"></span>
+       
+    </div>
+    <div class="error-msg">
+        <p id="my-error-msg" class="error f-size-10 f-weight-300">Please fill required field correctly</p>
+    </div>
+    <!-- <div id="house" class="inner-5 mt-12 d-none">                                        
+        <p class="ml-10 mb-5 f-size-10 f-weight-300">Address</p>
+        <div class="add ">
+          <div class="inner-add-sec d-flex">
+            <div>
+              <input type="text" id="house-number" class="element1" placeholder="Flat/ House Number">
+              <span id="house-number-error" class="f-size-10 f-weight-300 house-number-error error d-none"></span>
+            </div>
+            <div class="ml-20">
+              <input type="number" id="incCode" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="element2" placeholder="Pincode">
+              <span id="incCode-error" class="f-size-10 f-weight-300 error d-none"></span>
+            </div>
+
+          </div>
+          <input type="text" id="society" class="element3 mt-20" placeholder="Society">
+          <span id="society-error" class="f-size-10 f-weight-300 error d-none"></span>
+          </div>
+    </div> -->
+    <div class="sub-sec d-none mt-20" id="sub-sec">
+        <button type="submit" id="submit-btn" class="btn-primary" onclick="createProfile()" style="width: 40%;">Submit</button>
+    </div>
+
+
+
+</div>
+</form>
+</div>
+</div>
+
+<div class="container-login-5 mt-20 ">
+    <div class="trust">India's Trusted Home Makers</div>
+</div>
+
+
+
+
+
+<script src="./js/jquery.js"></script>
+<script src="./js/main.js"></script>
+<script>
+
+if(!(localStorage.getItem('id')==null)){
+  location.href= "home.html";  
+}
+
+var name;
+var contact;
+var otp;
+var email;
+
+
+$('#login').hide();
+$('#reSendOtpText').attr('disabled',true).addClass('btn-disable')
+
+
+
+
+$(document).ready(function() {
+
+  $('#myFInput').on('input', function() {
+
+    var regexPattern = /^[0-9]{10}$/;
+    var mobileNumber = $(this).val();
+    if (regexPattern.test(mobileNumber)) {
+        $("#phone").addClass("d-none")
+        $("#check").removeClass("d-none")
+        $("#check").css("bottom","17px")
+    } else {
+      $("#phone").removeClass("d-none")
+      $("#check").addClass("d-none")
+    }
+
+    $("#otp-error").hide();
+    $("#password").removeClass('form-error-input');
+    $('#mobile-error').text('');
+    $('#mobile-error').hide();
+    $("#inner-2").addClass("d-none")
+    $("#login-4").addClass("d-none")
+    $("#continue-btn").removeClass("d-none")
+    $('#inner-3').addClass('d-none');
+    $('#inner-4').addClass('d-none');
+    $('#sub-sec').addClass('d-none');
+    $('#reSendOtpText').attr('disabled',true).addClass('btn-disable')
+    $('#login').hide();
+
+  });
+
+  $('#password').on('input', function() {
+    $('#otp-error').text('');
+    $("#password").removeClass('form-error-input');
+    $('#otp-error').hide();
+  });
+
+
+  $('#name').on('input', function() {
+    $('#fullname-error').text('');
+    $('#fullname-error').hide();
+
+    var fullname = $('#name').val().trim();
+    if(fullname.length < 5){
+      $("#check-2").addClass("d-none");
+      $("#check-2").css("bottom","17px");
+      $('#check-2').hide();
+
+    }else{
+      $("#check-2").removeClass("d-none");
+      $("#check-2").css("bottom","17px");
+      $('#check-2').show();
+    }
+    
+  });
+
+  $('#myTInput').on('input', function() {
+    var email = $('#myTInput').val().trim();
+    console.log(!validateEmail(email))
+    if (validateEmail(email)) {
+      $('#email-error').text('');
+      $("#check-3").removeClass("d-none");
+      $("#check-3").css("bottom","17px");
+    } else{
+      $('#email-error').text('');
+      $("#check-3").addClass("d-none");
+      $("#check-3").css("bottom","17px");
+
+    }
+   
+  });
+});
+
+function loginvalidation(){
+    console.log("validation call")
+    contact = $('#myFInput').val().trim();
+    var regexPattern = /^[0-9]{10}$/; // Regular expression for 10-digit mobile number validation
+    var isValid = true;
+
+    if (!contact) {
+      $('#mobile-error').text('Please enter your mobile number');
+      $('#mobile-error').show();
+      isValid = false;
+      return false;
+    }
+
+    if (!regexPattern.test(contact)) {
+      $('#mobile-error').text('Invalid mobile number');
+      $('#mobile-error').show();
+      isValid = false;
+      return false;
+    }
+
+    if (isValid) {
+      $('#mobile-error').hide();
+      $("#inner-2").removeClass("d-none")
+      $("#login-4").removeClass("d-none")
+      $("#continue-btn").addClass("d-none")
+    } else {
+      $('#mobile-error').show();
+      return false;
+    }
+    console.log("validation return")
+    return true;
+}
+
+function signupValidation(){
+  console.log("signupValidation starrt")
+ 
+  var isValid = true;
+
+  name = $('#name').val().trim();
+  if (!name) {
+    $('#fullname-error').text('Please enter your full name');
+    $('#fullname-error').show();
+    isValid = false;
+  } else if (name.length < 5) {
+    $('#fullname-error').text('Your name length must be 5 characters');
+    $('#fullname-error').show();
+    $('#check-2').hide();
+    isValid = false;
+  }else {
+    $('#fullname-error').text('');
+    $("#check-2").removeClass("d-none");
+    $("#check-2").css("bottom","17px");
+    $('#check-2').show();
+  }
+
+  var regexPattern = /^[0-9]{6}$/; 
+  otp = $('#password').val().trim();
+  if (!otp) {
+    $('#otp-error').text('Please enter your OTP');
+    $("#password").addClass('form-error-input');
+    $('#otp-error').show();
+    isValid = false;
+  } else if (!regexPattern.test(otp)) {
+    $('#otp-error').text('Invalid OTP');
+    $("#password").addClass('form-error-input');
+    $('#otp-error').show();
+    isValid = false;
+  }else{
+    $('#otp-error').text('');
+    $("#password").removeClass('form-error-input');
+    $('#otp-error').hide();
+
+  }
+
+
+  if(!isValid){
+    return false;
+  }else{
+    return true;
+  }
+
+  console.log("signupValidation end")
+
+}
+
+
+$(document).ready(function() {
+  $('#login').on('click', function() {
+    var otp = $('#password').val().trim();
+    var regexPattern = /^[0-9]{6}$/; // Regular expression for 6-digit OTP validation
+    var isValid = true;
+
+    if (!otp) {
+      $('#otp-error').text('Please enter your OTP');
+      $("#password").addClass('form-error-input');
+      isValid = false;
+    } else if (!regexPattern.test(otp)) {
+      $('#otp-error').text('Invalid OTP');
+      $("#password").addClass('form-error-input');
+      isValid = false;
+    }
+
+    if (isValid) {
+      $('#otp-error').hide();
+      // login()
+      
+    } else {
+      $('#otp-error').show();
+     
+    }
+  });
+});
+
+
+
+
+$(document).ready(function() {
+  $('#done').on('click', function() {
+    var email = $('#myTInput').val().trim();
+    var fullname = $('#name').val().trim();
+    var isValid = true;
+
+   
+
+    if (!email) {
+     
+      isValid = true;
+    } else if (!validateEmail(email)) {
+      $('#email-error').text('Invalid email address');
+      $('#email-error').show();
+      console.log("invalid email address");
+      console.log(email);
+      isValid = false;
+    } 
+    else {
+      $('#email-error').text('');
+      $("#check-3").removeClass("d-none");
+      $("#check-3").css("bottom","17px");
+    
+    }
+    $('#name,#myTInput').on('input', function() {
+    $('#fullname-error').hide();
+    $('#email-error').hide();
+});
+
+
+
+    if (isValid) {
+      login()
+      console.log('Validation passed, executing function...');
+    }
+   
+  });
+
+ 
+
+});
+
+           setTimeout(function() {
+                document.getElementById("india").classList.remove("d-none")
+                document.getElementById("design-show").classList.remove("d-none")
+                document.querySelector(".container-login-3").style.display = "block"
+                document.querySelector(".trust").style.display = "none"
+            }, 2000);
+
+            
+              function showView(){
+                  $("#done").hide();
+                  $('#name').prop('disabled', true);
+                  $('#myTInput').prop('disabled', true);
+                  $("#house").removeClass("d-none");
+                  $(".container-login").css("display","none");
+                  $(".container-login-2").css("display","none");
+                  $(".myDone").css("display","block");
+                  $("#name").css("border-color","#F6F6F6");
+                  $("#myTInput").css("border-color","#F6F6F6");
+                  $("#sub-sec").removeClass("d-none")
+                  $("#fill").removeClass("opacity")
+              }
+
+
+
+
+$(document).ready(function() {
+  $('#myForm').on('click', function(e) {
+      e.preventDefault(); // Prevent form submission
+      
+  })
+});
+
+
+    function tokenSet(){
+      $.ajax({
+          type: 'POST',
+          url: URL + "setToken",
+          dataType: 'json',
+          data: {
+              id:localStorage.getItem("id"),
+              token:localStorage.getItem("token"),
+          },
+          beforeSend: function(request) {request.setRequestHeader("X-API-KEY", API_KEY);},
+          success: function (data, status, xhr) {
+          console.log("token successfully save");    
+          },
+          error: function (jqXhr, textStatus, errorMessage) {
+              console.log(jqXhr.responseJSON.message);
+          }
+      });
+    }
+
+
+
+
+
+      function sentOtp() {
+        $('#login').show();
+        $('#login').attr('disabled',true).addClass('btn-disable')
+        $('#reSendOtpText').attr('disabled',true).addClass('btn-disable')
+        contact = $("#myFInput").val().trim();
+        if(!checkConnection()){
+          showNotifier("No Network!",'err');
+          return false;
+        }
+        if(!loginvalidation()){
+          return false;
+        }
+
+
+      
+        $.ajax({
+            type: 'POST',
+            url: URL + 'sentOtpLogin',
+            data: { contact: contact },
+            dataType: 'json',
+            beforeSend: function(request) {request.setRequestHeader("X-API-KEY", API_KEY);},
+            success: function(data, status, xhr) {
+                  if (status == "success") {
+                    if (data.status == "B200" || data.status == "B201") {
+                        console.log('status: ' + status + ',data:' + ":" + data + ":");
+                        $('#login').attr('disabled',false).removeClass('btn-disable')
+                        showNotifier('OTP sent successfully');
+                        setTimeout(function(){
+                          $('#reSendOtpText').attr('disabled',false).removeClass('btn-disable')
+                      },5000);
+                    } else {
+                        console.log("ajax failed");
+                    }
+                }},
+                error: function(xhr, textStatus, errorMessage) {
+                    console.log('Error:' + errorMessage + ":::" + xhr.responseJSON.message);
+                    $("#myFInput").addClass('form-error-input');
+                    $('#mobile-error').show()
+                    $('#mobile-error').removeClass("d-none")
+                    if(xhr.responseJSON.message=="Please sign up first!"){
+                      $('#login').hide();
+                      console.log("please sign up")
+                      $("#myFInput").removeClass('form-error-input');
+                      $('#inner-3').removeClass('d-none');
+                      $('#inner-4').removeClass('d-none');
+                      $('#sub-sec').removeClass('d-none');
+                      
+
+
+      
+                  
+                  $.ajax({
+                      type: 'POST',
+                      url: URL + 'sentOtp',
+                      data: { contact: contact },
+                      dataType: 'json',
+                      beforeSend: function(request) {request.setRequestHeader("X-API-KEY", API_KEY);},
+                      success: function(data, status, xhr) {
+                          if (status == "success") {
+                              if (data.status == "B200" || data.status == "B201") {
+                                  console.log('status: ' + status + ',data:' + ":" + data + ":");
+                                  showNotifier(data.message);
+                                  setTimeout(function(){
+                                    $('#reSendOtpText').attr('disabled',false).removeClass('btn-disable')
+                                  },5000);
+                                }
+                          } else {
+                              console.log("ajax failed");
+                          }
+                      },
+                      error: function(xhr, textStatus, errorMessage) {
+                          console.log('Error:' + errorMessage + ":::" + xhr.responseJSON.message);
+                          $("#myFInput").addClass('form-error-input');
+                          $('#mobile-error').html(xhr.responseJSON.message);
+                      }
+                  });
+                } 
+            }
+        });
+      }
+
+    $("#login").click(function() {
+        if (isValidation()) {
+            login();
+           
+            
+        }
+    });
+
+
+    function isValidation(via) {
+        contact = $("#myFInput").val().trim();
+        password = $("#password").val().trim();
+        var phoneExp = /^\d{10}$/;
+        if (!phoneExp.test(contact)) {
+            $("#myFInput").addClass('form-error-input');
+            $('#mobileErr').html("Mobile number is invalid");
+            return false;
+        }
+        if(password==""){
+            showNotifier("Please inititate OTP","err");
+        }
+        
+       
+        var otpExp = /^[0-9]{6}$/;
+        console.log("IN",otpExp.test(password));
+        if (!(otpExp.test(password))) {
+            $('#otp-error').html("*OTP is invalid");
+            return false;
+        }
+
+        return true;
+
+    }
+
+
+
+
+    function login() {
+        if (!checkConnection()) {
+            return false;
+        }
+      
+        $.ajax({
+            type: 'POST',
+            url: URL + "otpLogin",
+            data: { contact: contact, otp: password, via:'app'},
+            dataType: 'json',
+            beforeSend: function(request) {request.setRequestHeader("X-API-KEY", API_KEY);},
+            success: function(data, status, xhr) {
+               console.log('status: ' + status + ', data: ' + ":" + data + ":");
+                if (status == "success") {
+                    localStorage.setItem("name", data.data.name);
+                    localStorage.setItem("contact", data.data.contact);
+                    localStorage.setItem("profileimage", data.data.profileimage);
+                    localStorage.setItem("email", data.data.email);
+                    localStorage.setItem("id", data.data.id);
+                    tokenSet();
+                    setTimeout(()=>{
+                        location.href = "home.html";    
+                    },300);
+                } else {
+                    console.log("ajax failed");
+                }
+            },
+
+            error: function(xhr, textStatus, errorMessage) {
+              console.log();
+              $("#otp-error").html(xhr.responseJSON.message);
+              $("#otp-error").show()
+              $("#otp-error").removeClass("d-none")
+              $("#password").addClass('form-error-input');
+          }
+        });
+    }
+        
+
+    function createProfile(){
+      if(!signupValidation()){
+        return false;
+      }
+
+      $.ajax({
+        type: 'POST',
+        url: URL + "otpSignup",
+        data: {name:name, contact: contact, otp: otp, email: email},
+        dataType: 'json',
+        beforeSend: function(request) { request.setRequestHeader("X-API-KEY", API_KEY); },
+        success: function(data, status, xhr) {
+            console.log('status: ' + status + ', data: ' + ":" + data + ":");
+            if (status == "success") {
+                 if(data.status) {
+                     localStorage.setItem("name", data.data.name);
+                     localStorage.setItem("contact", data.data.contact);
+                     localStorage.setItem("profileimage", data.data.profileimage);
+                     localStorage.setItem("email", data.data.email);
+                     localStorage.setItem("id", data.data.id);
+                    tokenSet();
+                    showNotifier('Welcome ' + data.data.name + ' !');
+                    setTimeout(()=>{
+                        location.href = "home.html";    
+                    },300);
+                }
+            } else {
+                console.log("ajax failed");
+            }
+        },
+        error: function(xhr, textStatus, errorMessage) {
+            console.log('Error:' + errorMessage+":::"+xhr.responseJSON.message);
+            $("#otp-error").html(xhr.responseJSON.message);
+            $("#otp-error").show()
+            $("#otp-error").removeClass("d-none")
+            $("#password").addClass('form-error-input');
+            
+        }
+      })
+    }
+
+    </script>
+</body>
+</html>
+
+    
+
+
+   
+
+
+
+
+
+
+
+    

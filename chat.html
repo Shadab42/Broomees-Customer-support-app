@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
+    <title>customer-support</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+        .chat-popup-btn{
+            display:grid;
+            grid-template-columns: auto auto;
+            column-gap: 3%;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div class="chat-sec d-flex align-center">
+            <figure>
+                <a href="#" class="d-flex">
+                    <img src="./images/arrow-angle-pointing-to-left.png" style="width: 14px;" onclick="showPop()"  alt="">
+                </a>
+            </figure>
+            <h3 class="ml-5">Chat Support</h3> 
+        </div>
+
+
+
+            
+
+    <div class="main" id="main">
+    <div class="container d-flex align-center mt-20 ">
+        <div class="circle">
+            <figure>
+                <img src="./images/Broomeeschaticon.svg" alt="">
+            </figure>
+            
+        </div>
+        <div class="para">
+        <p> You have selected <span>worker Related </span>issues</p>
+       </div>
+    </div>
+
+    <div class="container-1 d-flex gap-top  ">
+        <div class="circle">
+            <figure class="mt-5">
+                <img src="./images/Broomeeschaticon.svg" alt="">
+            </figure>
+            
+        </div>
+        <div class="para">
+        <p>Hello welcome to <span>Broomees </span>
+            chat support, please select an issue you are facing related to the booking to continue.</p>
+    </div>
+    </div>
+
+    <div class="container-2  mt-20">
+        <div class="queries">
+            <p>my worker is not performing well</p>
+            <p>issue with timing</p>
+            <p>behavioral issues</p>
+            <p>can i get a replecement?</p>
+            <p>payment issue</p>
+            <p>i have an  emerangcy report</p>
+        </div>
+    </div>
+
+    <div class="question left mt-20 ">
+        <p>my worker is not performing up to the mark <span>SM</span></p>        
+    </div>
+    <div class="time"><span id="date">4:26 pm 9th february</span></div>
+
+    <div class="container mt-20 ">
+        <div class="circle">
+            <figure>
+                <img src="./images/Broomeeschaticon.svg" alt="">
+            </figure>
+            
+            </div>
+            <div class="para">
+            <p>please select from the following option to continue</p>
+        </div>
+        
+    </div>
+    <div class="time time-2"><span id="date">4:26 pm 9th february</span></div>
+  
+
+
+
+    <div class="option mt-20 ">
+        <p>skill related issue</p>
+        <p>communication gap</p>
+        <p>other</p>
+    </div>
+
+    <div class="question left mt-20 ">
+        <p>skill related issue <span>SM</span></p>
+    </div>
+    <div class="time"><span id="date">4:26 pm 9th february</span></div>
+
+    <div class="container mt-20 ">
+        <div class="circle">
+            <figure>
+                <img src="./images/Broomeeschaticon.svg" alt="">
+            </figure>
+            
+        </div>
+        <div class="para">
+        <p>please type out any additional comment</p>
+    </div>
+    </div>
+    <div class="time time-2"><span id="date">4:26 pm 9th february</span></div>
+
+    <div class="question left mt-20 ">
+        <p>Please resolve my issue asap <span>SM</span></p>
+    </div>
+    <div class="time"><span id="date">4:26 pm 9th february</span></div>
+
+
+    <div class="container-1 mt-20  ">
+        <div class="circle">
+            <figure class="mt-5">
+                <img src="./images/Broomeeschaticon.svg" alt="">
+            </figure>
+            
+        </div>
+        <div class="para">
+        <p>your request has been ragistered, your ticket number is <span>#7659365</span>. our executive will contact you soon </p>
+    </div>
+    </div>
+    <div class="time time-2"><span id="date">4:26 pm 9th february</span></div>
+
+
+    <div class="container-1 mt-20 ">
+        <div class="circle">
+            <figure class="mt-5">
+                <img src="./images/Broomeeschaticon.svg" alt="">
+            </figure>
+            
+        </div>
+        <div class="para">
+        <p>Thank you for contacting broomees support, Have a great day! </p>
+    </div>
+    </div>
+    <div class="time time-2  mb-100"><span id="date">4:26 pm 9th february</span>
+    </div>
+    </div>
+    <div class="my-popup y-translate main" id="main" style="top:100%">
+
+    <div class="main-popup-outer" id="main-popup-outer">
+        <p class="f-size-13 f-weight-400">Do you want to end the current</p>
+        <p class="f-size-13 f-weight-400">chat session?</p>
+        <div class="chat-popup-btn mt-30">
+            <button class="btn-gray f-size-12 f-weight-400" onclick="hidePop()">No</button>
+            <button class="btn-primary" onclick="redirectToqueryPage('query.html')">Yes</button>
+        </div>
+    </div>
+</div>
+
+<div class="parent-popUp"  onclick="hidePop()"></div>
+
+
+<!-- footer start -->
+<?php require("footer.html"); ?>
+<!-- footer end -->
+
+
+                <!-- end search html -->
+<script src="./js/main.js"></script>
+<script src="./js/jquery.js"></script>
+<script>
+    function showPop(){
+                $(".my-popup").css("top","40%")
+                $(".parent-popUp").css("visibility","visible")
+            }
+
+     function hidePop(){
+            $(".my-popup").css("top","100%")
+            $(".parent-popUp").css("visibility","hidden")
+          }
+
+          function redirectToqueryPage(url){
+            window.location.href = url;
+          }
+
+
+</script>
+
+    
+</body>
+</html>

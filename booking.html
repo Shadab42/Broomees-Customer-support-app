@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer-support</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+    .booking-card,
+    .attendance-card{width: 100%;border-radius: 16px;display: grid;grid-template-columns: 30% 66%;column-gap: 3%;padding: 2%;position: relative;background-color: #fafafa;}
+    </style>
+</head>
+<body>
+    <div class="peronal-page mb-100">
+       <div class="w-90">
+         <div class="booking-top-section d-flex align-center">
+            <figure class="d-flex align-center">
+                <a href="home.html" class="d-flex">
+                    <img src="./images/arrow-angle-pointing-to-left.png" class="w-16" alt="">
+                </a>
+                <h2 class="pl-5">Bookings</h2> 
+            </figure>
+            <div class="right-image">
+                <img src="./images/Group 423.svg" alt="">
+            </div>
+        </div>
+        <div class="mt-10">
+            <h5 class="mb-10">Select a service to continue</h5>
+        </div>
+
+    <div id="booking-sub-category" >
+        <div class="booking-card book-img mt-10">
+            <div style="position:relative;">
+                    <img src="./images/activity-image.png" class="w-100 h-100" alt="">
+                     <div class="rating-div">
+                         <img src="./images/star.svg" class="w-10" alt="">
+                         <p class="f-size-10">4.2</p>
+                     </div>
+            </div>
+            <div class="rigth-side-contents mt-5">
+                <h5>Home-style North Indian</h5>
+                <div class="details-parent">
+                    <div class="details mt-5">
+                        <div class="content-parent d-flex align-center">
+                            <p class="text-primary f-size-12 f-weight-700">₹3050</p>
+                            <p class="dot"></p>
+                            <p class="f-size-10 f-weight-400">starting</p>
+                    </div>
+                        <p class="f-size-9 f-weight-400">Authentic North Indian home-style</p>
+                        <p class="f-size-9 f-weight-400">cooking service for delicious meals</p>
+                        <p class="my-gray-text mt-5 f-size-9 f-weight-400">+All services inclusive</p>
+                    </div>
+                    <button class="book-parentbtn" id="book-parentbtn" onclick="showMainPop()">+</button>
+                    <img src="./images/edit-pen.png" id="edit-booking" class="d-none" onclick="showMainPop()" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="booking-card book-img mt-10">
+            <div style="position:relative;">
+                <img src="./images/image 20.png" class="w-100 h-100" alt="">
+                        <div class="rating-div">
+                            <img src="./images/star.svg" class="w-10" alt="">
+                            <p class="f-size-10">4.2</p>
+                        </div>
+            </div>
+            <div class="rigth-side-contents mt-5">
+                    <h5>Multi Cuisine Cook</h5>
+                <div class="details-parent">
+                    <div class="details mt-5">
+                        <div class="content-parent d-flex align-center">
+                            <p class="text-primary f-size-12 f-weight-700">₹3050</p>
+                            <p class="dot"></p>
+                            <p class="f-size-10 f-weight-400">starting</p>
+                        </div>
+                        <p class="f-size-9 f-weight-400">Authentic North Indian home-style</p>
+                        <p class="f-size-9 f-weight-400">cooking service for delicious meals</p>
+                        <p class="my-gray-text f-size-9 f-weight-400 mt-5">+All services inclusive</p>
+                    </div>
+                    <button class="book-parentbtn" id="book-parentbtn" onclick="warnPopup()">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="mt-30 grayout-sec">
+    <p  class="f-size-13 f-weight-300 ml-15">Add on Services</p>
+
+    <div id="booking-addon-category">
+            <div class="booking-card book-img mt-5">
+            <div style="position:relative;">
+            <!-- <img src="./images/image 21.png"  class="w-100 h-100" alt=""> -->
+                        <div class="rating-div">
+                            <img src="./images/star.svg" class="w-10" alt="">
+                            <p class="f-size-10">4.2</p>
+                        </div>
+                        
+        </div>
+                   
+        
+    
+        <div class="rigth-side-contents mt-5">
+        <h5>Dish-washing</h5>
+        <div class="details-parent">
+    
+    
+        <div class="details mt-5">
+            <div class="content-parent d-flex align-center">
+                <p class="text-primary f-size-12 f-weight-700">₹3050</p>
+                <p class="dot"></p>
+                <p class="f-size-10 f-weight-400">starting</p>
+        
+            </div>
+            <p class="f-size-9 f-weight-400">Authentic North Indian home-style</p>
+            <p class="f-size-9 f-weight-400">cooking service for delicious meals</p>
+            <p class="my-gray-text f-size-9 f-weight-400 mt-5">+All services inclusive</p>
+        </div>
+        <button class="book-parentbtn" onclick="showMainPop()" disabled>+</button>
+        </div>
+        </div>
+        
+        </div>
+
+        </div>
+    </div>
+
+<div class="detail-add-to-cart mt-50 d-none" id="myAnimation">
+    <div class="d-flex add-to-cart">
+
+        <p class="f-size-15 f-weight-500">1 Service added</p>
+        <div class="d-flex">
+            <p class="f-size-15 f-weight-400">Cart</p>
+            <img src="./images/Cart.png" style="width: 28%;" class="ml-10" alt="">
+            
+        </div>
+    </div>
+    <div class="line mt-10 mb-20"></div>
+    <div class="d-flex space-between">
+        <p class="f-size-13 f-weight-400">Estimated Hours</p>
+        <p class="f-size-13 f-weight-400">2.5 Hours</p>
+    </div>
+    <div class="d-flex space-between">
+        <p class="f-size-13 f-weight-400">Estimated Salary</p>
+        <p class="f-size-13 f-weight-400">₹3050.00</p>
+    </div>
+
+    <div class="buttons-cart">
+        <button class="btn-gray" onclick="viewModal()">View Cart</button>
+        <a href="bookingSummery.html">
+        <button class="btn-black w-100">Continue</button>
+        </a>
+    </div>
+
+</div>
+
+<div class="my-popup y-translate" id="main">
+    <!-- <div class="main-popup-outerrr"></div> -->
+
+    <div class="main-popup-outer d-none" >
+
+        <div id="selection_container" style="overflow-y: auto;height: 459px;" >
+
+            <h4>For how many People?</h4>
+            <p class="f-size-10 f-weight-400 mb-10">select 1 out of 6 options</p>
+            <div class="size-option">
+                <div class="seroption ">
+                    <button class="dropdownSelect"><div class="green-glob d-none"></div>1 Person</button>
+                    <button class="dropdownSelect"><div class="green-glob d-none"></div>2 Person</button>
+                    <button class="dropdownSelect"><div class="green-glob d-none"></div>3 Person</button>
+                    <button class="dropdownSelect"><div class="green-glob d-none"></div>4 Person</button>
+                    <button class="dropdownSelect"><div class="green-glob d-none"></div>5 Person</button>
+                    <button class="dropdownSelect"><div class="green-glob d-none"></div>6 Person</button>
+                </div>
+            </div>
+            <div class="line mt-10"></div>
+
+
+            <h2  class="f-size-14 f-weight-500 mt-10">How many meals per day?</h2>
+            <p class="f-size-10 f-weight-400 mb-10">select 1 out of 3 options</p>
+            <div class="size-option">
+                <div class="seroption ">
+                    <button class="dropdownSelect"><div class="green-glob d-none"></div>Breakfast & Lunch</button>
+                    <button class="dropdownSelect"><div class="green-glob d-none"></div>Dinner</button>
+                    <button class="dropdownSelect"><div class="green-glob d-none"></div>All three meals (breakfast, lunch & dinner)</button>
+                </div>
+            </div>
+            <div class="line mt-10"></div>
+
+
+
+            <h2  class="f-size-14 f-weight-500 mt-10">Veg/Non Veg?</h2>
+            <p class="f-size-10 f-weight-400 mb-10">select 1 out of 2 options</p>
+            <div class="size-option">
+            <div class="seroption ">
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>Veg food only</button>
+                <button class="dropdownSelect"><div class="green-glob d-none"></div>Veg & Non Veg</button>
+            </div>
+            </div>
+        </div>
+
+
+<div class="buttons-option mt-20">
+    <button class="btn-gray" onclick="hideMainPop()">Close</button>
+    <button class="btn-black" id="popupButton" onclick="showSuccessPop()">add to cart</button>
+</div>
+
+
+<div class="success-popup" id="popup">
+<img src="./images/Success.gif" style="width: 60%;" alt=""> 
+<p>Add to Cart!</p>   
+
+</div>
+
+   
+</div>
+
+
+
+
+<div class="warning-popup d-none" id="warning-popup">
+    <div class="upper-content ">
+        <div class="d-flex space-between">
+            <h4 >Replace Cart Items?</h4>
+            <img src="./images/my-cart.svg" alt="">
+        </div>
+        <p style="color: #9b9b9b;" class="f-size-10 f-weight-400 mt-5; mb-10" >Your cart contains the Home-style North Indian cooking service, would you like to replace it with your current selection</p>
+       
+
+    </div>
+    <div class="buttons-option mt-20">
+        <button class="btn-gray" onclick="hideMainPop()">Cancel</button>
+        <button class="btn-black"  onclick="showMainPop()">Confirm & update</button>
+    </div>
+    
+</div>
+
+<div class="view-cart-popup d-none">
+    <div class="upper-content ">
+        <div class="d-flex space-between">
+            <h4 >One Service Added</h4>
+            <img src="./images/my-cart.svg" alt="">
+        </div>
+        <p class="f-size-10 f-weight-400 mt-5; mb-10" >View & Customize your cart</p>
+       
+
+    </div>
+
+    <div class="myBooking-card-parent">
+
+        <div class="booking-card">
+        <div style="position:relative;">
+                    <img src="./images/activity-image.png" class="w-100 h-100" alt="">
+                     <div class="rating-div">
+                         <img src="./images/star.svg" class="w-10" alt="">
+                         <p class="f-size-10">4.2</p>
+                     </div>
+                   
+            </div>
+
+            <div class="rigth-side-contents mt-5">
+               <h5>Home-style North Indian</h5>
+               <div class="details-parent">
+            <div class="view-cart-detail mt-5">
+                <p >House Size 1 BHK</p>
+                <p >Bathrooms 2</p>
+                <p >Staring Date 5th December 2022</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="my-delete-opt d-flex d-none">
+        <button class="yes-delete" onclick="refreshPage()">Yes delete</button>
+        <button class="btn-black" onclick="hideDltBtn()">No, Keep It</button>
+    </div>
+    </div>
+    </div>
+                   
+
+
+
+    
+
+
+
+
+<div class="delete-sec-parent ">
+    <div class= "delete-sec d-flex align-center mt-10">
+        <button onclick="showMainPop()">Customize <img src="./images/arrow-down-sign-to-navigate.png" class="pl-10" style="width: 20px;" alt=""></button>
+        
+    </div>
+    <div class="delete-icon d-flex align-center justify-center">
+        <img src="./images/delete.png" onclick="myDltOpt()" class="w-10" alt="">
+    </div>
+</div>
+<div class="buttons-option mt-30" >
+    <button class="btn-gray" onclick="hideMainPop()">Close</button>
+    <a href="./bookingSummery.html">
+        <button class="btn-black w-100" >Continue</button>
+    </a>
+    
+</div>
+
+</div>
+</div>
+<div class="parent-popUp" onclick="hideMainPop()"></div>
+</div>
+</div>
+</body>
+
+
+<script src="./js/jquery.js"></script>
+<script src="./js/main.js"></script>
+<script async defer src="js/bottomNav.js"></script>
+<script>
+
+    // empty parent div
+    $('#booking-addon-category').html("");
+         function refreshPage(){
+                location.reload();
+            }
+        function showPop(){
+            $(".my-popup").css("top","15%")
+            $(".parent-popUp").css("visibility","visible")
+        }
+
+
+        function hidePop(){
+            $(".my-popup").css("top","100%")
+            $(".parent-popUp").css("visibility","hidden")
+        }
+
+
+        function showMainPop(){
+            showPop()
+            $(".main-popup-outer").removeClass("d-none")
+            $(".view-cart-popup").addClass("d-none")
+            $("#warning-popup").addClass("d-none")
+          
+        }
+
+        function hideMainPop(){
+            hidePop()
+            $(".detail-add-to-cart").addClass("animation-occure");
+
+        }
+
+        function viewModal(){
+            showPop()
+            $(".main-popup-outer").addClass("d-none")
+            $(".view-cart-popup").removeClass("d-none")
+            $("#warning-popup").addClass("d-none")
+        }
+        function warnPopup(){
+            $(".main-popup-outer").addClass("d-none")
+            $(".view-cart-popup").addClass("d-none")
+            $(".warning-popup").removeClass("d-none")
+            $(".my-popup").css("top","25%")
+            $(".parent-popUp").css("visibility","visible")
+        }
+        function myDltOpt(){
+            $(".booking-card").css("background-color","#F0F0F0")
+            $(".my-delete-opt").removeClass("d-none")
+        }
+        function hideDltBtn(){
+            $(".my-delete-opt").addClass("d-none")
+        }
+
+            // 15 baby care,39 all rounder,14 home made,19 cook,40 chef for party
+
+
+
+    let selectedSId;
+    let filterData;
+    let services_obj;
+    let addOnServices_obj;
+
+    function populateBookingCard(){
+        let serviceData = JSON.parse(localStorage.getItem('serviceData'))
+        selectedSId = JSON.parse(localStorage.getItem('serviceID'))
+        filterData = serviceData.filter(function(data){
+            return data.id==selectedSId;
+        })[0]
+        console.log(filterData)
+        console.log(JSON.parse(filterData.categories))
+        services_obj=JSON.parse(filterData.categories)[0];
+        addOnServices_obj=JSON.parse(filterData.categories)[1];
+      
+
+
+
+        let services_card='';
+        (services_obj.service).forEach((element,ind) => {
+            services_card+=`<div class="booking-card book-img mt-10">
+                <div style="position:relative;">
+                        <img src="${imageUrl}/services/${element.sImg}" class="w-100 h-100" alt="">
+                        <div class="rating-div">
+                            <img src="./images/star.svg" class="w-10" alt="">
+                            <p class="f-size-10">${element.rating}</p>
+                        </div>
+                </div>
+                <div class="rigth-side-contents mt-5">
+                    <h5>${element.val}</h5>
+                    <div class="details-parent">
+                        <div class="details mt-5">
+                            <div class="content-parent d-flex align-center">
+                                <p class="text-primary f-size-12 f-weight-700">₹${element.startingPrice}</p>
+                                <p class="dot"></p>
+                                <p class="f-size-10 f-weight-400">starting</p>
+                        </div>
+                            <p class="f-size-9 f-weight-400">${element.description}</p>
+                            <p class="my-gray-text mt-5 f-size-9 f-weight-400">+All services inclusive</p>
+                        </div>
+                        <button class="book-parentbtn" id="book-parentbtn" onclick="populateSelection(${ind})">+</button>
+                        <img src="./images/edit-pen.png" id="edit-booking" class="d-none" onclick="showMainPop()" alt="">
+                    </div>
+                </div>
+            </div>`
+        });
+        $('#booking-sub-category').html(services_card);
+
+      
+        if(addOnServices_obj){
+            let addOnServices_card='';
+            (addOnServices_obj.service).forEach(element => {
+                addOnServices_card+=`<div class="booking-card book-img mt-5">
+                        <div style="position:relative;">
+                        <img src="${imageUrl}/services/${element.sImg}" class="w-100 h-100" alt="">
+                                    <div class="rating-div">
+                                        <img src="./images/star.svg" class="w-10" alt="">
+                                        <p class="f-size-10">${element.rating}</p>
+                                    </div>    
+                    </div>
+                    <div class="rigth-side-contents mt-5">
+                    <h5>${element.val}</h5>
+                    <div class="details-parent">
+                    <div class="details mt-5">
+                        <div class="content-parent d-flex align-center">
+                            <p class="text-primary f-size-12 f-weight-700">₹${element.startingPrice}</p>
+                            <p class="dot"></p>
+                            <p class="f-size-10 f-weight-400">starting</p>
+                        </div>
+                        <p class="f-size-9 f-weight-400">${element.description}</p>
+                        <p class="f-size-9 f-weight-400">cooking service for delicious meals</p>
+                        <p class="my-gray-text f-size-9 f-weight-400 mt-5">+All services inclusive</p>
+                    </div>
+                    <button class="book-parentbtn" onclick="showMainPop()" disabled="">+</button>
+                    </div>
+                    </div>
+                </div>`
+            });
+            $('#booking-addon-category').html(addOnServices_card);
+
+        }
+        
+
+    }
+    populateBookingCard()
+
+
+    function populateSelection(ind){
+        showMainPop()
+
+        let selection_obj=services_obj.service[ind];
+        let content='';
+        (selection_obj.dropdown).forEach(element=>{
+            console.log(element)
+            let innerContent='';
+            element.data.forEach((ele,i,arr)=>{
+                if(i==0){
+                    innerContent+=`
+                    <h4>${ele.value}</h4>
+                    <p class="f-size-10 f-weight-400 mb-10">select 1 out of ${arr.length-1} options</p>
+                    <div class="size-option">
+                        <div class="seroption ">`;
+                }else{
+                    innerContent+=`<button class="dropdownSelect"><div class="green-glob d-none"></div>${ele.value}</button>`
+                }
+            })
+            innerContent+=` </div>
+                </div>
+                <div class="line mt-10">`
+            content+=innerContent;
+                
+        })
+
+        $('#selection_container').html(content)
+        selection_click();
+    }
+
+    
+
+
+</script>
+
+
+
+
+</html>
